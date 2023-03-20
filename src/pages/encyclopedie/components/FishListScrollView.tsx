@@ -6,6 +6,7 @@ import {RouteProp} from '@react-navigation/native';
 import {ExpandableView} from '../../common/components/ExpandableView';
 import {BottomViewFish} from './BottomViewFish';
 import {TopViewAnimal} from './TopViewAnimal';
+import {CapitalizeFirstLetters} from '../../common/functions/CapitalizeString';
 
 type FishListRouteProp = RouteProp<TabStackParamList, 'Fish'>;
 
@@ -23,7 +24,7 @@ export function FishListScrollView({route}: FishProps) {
         <ExpandableView
           topView={
             <TopViewAnimal
-              name={fish.item.name['name-EUfr']}
+              name={CapitalizeFirstLetters(fish.item.name['name-EUfr'])}
               rarity={fish.item.availability.rarity}
               price={fish.item.price}
               icon={fish.item.icon_uri}

@@ -6,6 +6,7 @@ import {RouteProp} from '@react-navigation/native';
 import {ExpandableView} from '../../common/components/ExpandableView';
 import {TopViewAnimal} from './TopViewAnimal';
 import {BottomViewBugs} from './BottomViewBugs';
+import {CapitalizeFirstLetters} from '../../common/functions/CapitalizeString';
 
 type BugListRouteProp = RouteProp<TabStackParamList, 'Bug'>;
 
@@ -23,7 +24,7 @@ export function BugListScrollView({route}: BugProps) {
         <ExpandableView
           topView={
             <TopViewAnimal
-              name={bug.item.name['name-EUfr']}
+              name={CapitalizeFirstLetters(bug.item.name['name-EUfr'])}
               rarity={bug.item.availability.rarity}
               price={bug.item.price}
               icon={bug.item.icon_uri}
