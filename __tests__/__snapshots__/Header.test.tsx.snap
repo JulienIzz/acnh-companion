@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header with some text 1`] = `
+<View
+  style={
+    {
+      "height": 60,
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      {
+        "alignItems": "center",
+        "height": "100%",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "testUri": "../../../src/pages/header/img/header_background.jpg",
+        }
+      }
+      style={
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          {
+            "height": "100%",
+            "width": undefined,
+          },
+          undefined,
+        ]
+      }
+    />
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 30,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Mock Text Header
+    </Text>
+  </View>
+</View>
+`;
