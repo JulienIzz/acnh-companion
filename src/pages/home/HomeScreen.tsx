@@ -3,7 +3,6 @@ import React from 'react';
 import {Header} from '../header/Header';
 import {HomeButton} from './components/HomeButton';
 import {HOME_SCREEN_BUTTONS_DATASET} from './components/HomeButtonsData';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useFetchBugs} from '../common/functions/FetchBugs';
 import {useFetchFishes} from '../common/functions/FetchFishes';
 import {LoadingPage} from '../common/components/LoadingPage';
@@ -16,7 +15,6 @@ const HEADER_HOME_TEXT = 'Companion';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 
 export const HomeScreen = () => {
-  const insets = useSafeAreaInsets();
   const {data: fishList, isLoading: isFishLoading} = useFetchFishes();
   const {data: bugList, isLoading: isBugLoading} = useFetchBugs();
 
@@ -24,8 +22,6 @@ export const HomeScreen = () => {
     return (
       <View
         style={{
-          paddingTop: insets.top,
-          paddingBottom: insets.bottom,
           flex: 1,
         }}>
         <Header
@@ -35,6 +31,7 @@ export const HomeScreen = () => {
         <View style={styles.listWrapper}>
           {HOME_SCREEN_BUTTONS_DATASET.map(button => (
             <HomeButton
+              key={button.label}
               label={button.label}
               imagePath={button.imagePath}
               navigationTarget={button.navigationTarget}

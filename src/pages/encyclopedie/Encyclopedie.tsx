@@ -1,7 +1,6 @@
 import {View, Image, ImageSourcePropType} from 'react-native';
 import {Header} from '../header/Header';
 import type {Bug, Fish} from './Types';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {FishListScrollView} from './components/FishListScrollView';
 import {BugListScrollView} from './components/BugListScrollView';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
@@ -23,7 +22,6 @@ export type TabStackParamList = {
 };
 
 export const Encyclopedie = () => {
-  const insets = useSafeAreaInsets();
   const {data: fishList, isLoading: isFishLoading} = useFetchFishes();
   const {data: bugList, isLoading: isBugLoading} = useFetchBugs();
 
@@ -31,8 +29,6 @@ export const Encyclopedie = () => {
     return (
       <View
         style={{
-          paddingTop: insets.top,
-          paddingBottom: insets.bottom,
           flex: 1,
         }}>
         <Header

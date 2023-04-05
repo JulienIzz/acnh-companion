@@ -5,7 +5,6 @@ import {
   ImageSourcePropType,
 } from 'react-native';
 import {Header} from '../../header/Header';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 type Props = {
   image: ImageSourcePropType;
@@ -13,12 +12,9 @@ type Props = {
 };
 
 export function LoadingPage({image, text}: Props) {
-  const insets = useSafeAreaInsets();
   return (
     <View
       style={{
-        paddingTop: insets.top,
-        paddingBottom: insets.bottom,
         flex: 1,
       }}>
       <Header headerImagePath={image} headerText={text} />
