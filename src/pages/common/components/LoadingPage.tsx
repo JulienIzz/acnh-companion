@@ -16,7 +16,8 @@ export function LoadingPage({image, text}: Props) {
     <View
       style={{
         flex: 1,
-      }}>
+      }}
+      testID="Loader">
       <Header headerImagePath={image} headerText={text} />
       <View style={styles.loaderPage}>
         <ActivityIndicator />
