@@ -10,7 +10,7 @@ import {
   MAX_GRID_WIDTH,
   GRID_WIDTH_RATIO,
   NUMBER_OF_COLUMNS,
-} from '../HomeScreen';
+} from '../HomeScreenGrid';
 import {IconTypography} from '../../../theme/typography/Typography';
 import {useNavigation} from '@react-navigation/native';
 import type {ButtonData} from './HomeButtonsData';
