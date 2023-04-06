@@ -1,11 +1,11 @@
-import {Header} from '../src/pages/header/Header';
+import {Header} from './Header';
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
 
 test('header with some text', async () => {
   // PARTIE 1 : On rend le composant avec les constantes qu'on veut
   const expectedHeaderTextForTest = 'Mock Text Header';
-  const expectedHeaderImageForTest = require('../src/pages/header/img/header_background.jpg');
+  const expectedHeaderImageForTest = require('./img/header_background.jpg');
 
   render(
     <Header

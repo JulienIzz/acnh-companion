@@ -1,4 +1,4 @@
-import {HomeScreen} from '../src/pages/home/HomeScreen';
+import {HomeScreen} from './HomeScreen';
 import React from 'react';
 import {
   render,
