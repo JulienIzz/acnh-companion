@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon grid with pressable buttons 1`] = `
+<View
+  style={
+    {
+      "alignSelf": "center",
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "marginTop": 40,
+      "maxWidth": 500,
+      "width": "90%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "height": 160,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "height": 100,
+          "opacity": 1,
+          "width": 100,
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../src/pages/home/img/bugs.png",
+          }
+        }
+        style={
+          {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+          "textAlign": "center",
+        }
+      }
+    >
+      Bouton numéro 1
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "height": 160,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "height": 100,
+          "opacity": 1,
+          "width": 100,
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../src/pages/home/img/bugs.png",
+          }
+        }
+        style={
+          {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+          "textAlign": "center",
+        }
+      }
+    >
+      Bouton numéro 2
+    </Text>
+  </View>
+</View>
+`;
