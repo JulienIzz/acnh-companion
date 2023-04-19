@@ -1,4 +1,4 @@
-export const ShowAvailabilityhours = (availability: string) => {
+export const FormatHoursIntervalIntoString = (availability: string) => {
   let textToShow = '';
   availability == ''
     ? (textToShow = 'Toute la journée')
