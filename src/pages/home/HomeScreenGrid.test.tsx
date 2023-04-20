@@ -1,7 +1,7 @@
 import {HomeScreenGrid} from './HomeScreenGrid';
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
-import {ButtonData} from './components/HomeButtonsData';
+import {ButtonData} from './components/HomeButton';
 
 jest.mock('@react-navigation/native');
 

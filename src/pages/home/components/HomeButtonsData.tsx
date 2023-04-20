@@ -1,7 +1,8 @@
-import {ImageSourcePropType} from 'react-native';
+import {ImageSourcePropType} from 'react-native/types';
+import {Routes} from '../../../navigation/Types';
 
 export interface ButtonData {
-  navigationTarget: 'Home' | 'Encyclopedie' | 'Test';
+  navigationTarget: Routes;
   imagePath: ImageSourcePropType;
   label: string;
 }

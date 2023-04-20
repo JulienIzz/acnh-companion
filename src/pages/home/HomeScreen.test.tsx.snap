@@ -80,7 +80,7 @@ exports[`homescreen with a header and multiple buttons 1`] = `
         {
           "alignItems": "center",
           "height": 160,
-          "width": NaN,
+          "width": 150,
         }
       }
     >
@@ -151,7 +151,7 @@ exports[`homescreen with a header and multiple buttons 1`] = `
         {
           "alignItems": "center",
           "height": 160,
-          "width": NaN,
+          "width": 150,
         }
       }
     >
