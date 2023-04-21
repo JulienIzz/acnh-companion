@@ -16,7 +16,7 @@ export const FormatDateIntervalIntoString = (availability: string) => {
     .replace('7', 'Juillet')
     .replace('8', 'Aout')
     .replace('9', 'Septembre')
-    .replace('-', ' à ')
-    .replace('-', ' à ');
+    .replace('-', 'à')
+    .replace('-', 'à');
   return textToShow;
 };
