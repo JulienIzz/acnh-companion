@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`animal bottom view card with mock bug information 1`] = `
+[
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontSize": 14,
+      }
+    }
+  >
+    Disponibilité : Avril à Septembre
+  </Text>,
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontSize": 14,
+      }
+    }
+  >
+    Horaire : 9am - 4pm
+  </Text>,
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontSize": 14,
+      }
+    }
+  >
+    Localisation : River
+  </Text>,
+]
+`;
