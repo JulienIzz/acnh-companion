@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`animal top view card with mock fish information 1`] = `
+[
+  <View
+    style={
+      {
+        "flex": 1,
+        "justifyContent": "space-evenly",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Nom : PoissonPilote1
+    </Text>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Rareté : Common
+    </Text>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Prix : 900
+    </Text>
+  </View>,
+  <View
+    style={
+      {
+        "height": 80,
+        "margin": 5,
+        "width": 80,
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "uri": "",
+        }
+      }
+      style={
+        {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </View>,
+]
+`;
