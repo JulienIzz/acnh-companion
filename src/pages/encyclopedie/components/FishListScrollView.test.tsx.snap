@@ -1,0 +1,477 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fish scroll view card with 2 mock fish information 1`] = `
+<RCTScrollView
+  data={
+    [
+      {
+        "availability": {
+          "isAllDay": false,
+          "isAllYear": false,
+          "location": "River",
+          "month-array-northern": [
+            1,
+            2,
+          ],
+          "month-array-southern": [
+            1,
+            2,
+          ],
+          "month-northern": "Avril à Septembre",
+          "month-southern": "Avril à Septembre",
+          "rarity": "Common",
+          "time": "9am - 4pm",
+        },
+        "icon_uri": "",
+        "id": 1,
+        "image_uri": "",
+        "name": {
+          "name-EUfr": "PoissonPilote1",
+          "name-USen": "PoissonPilote1",
+        },
+        "price": 900,
+        "price-cj": 1200,
+        "shadow": "Small",
+      },
+      {
+        "availability": {
+          "isAllDay": true,
+          "isAllYear": true,
+          "location": "Sea",
+          "month-array-northern": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+          ],
+          "month-array-southern": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+          ],
+          "month-northern": "Toute l'année",
+          "month-southern": "Toute l'année",
+          "rarity": "Rare",
+          "time": "Toute la journée",
+        },
+        "icon_uri": "",
+        "id": 2,
+        "image_uri": "",
+        "name": {
+          "name-EUfr": "PoissonPilote2",
+          "name-USen": "PoissonPilote2",
+        },
+        "price": 15000,
+        "price-cj": 18000,
+        "shadow": "Medium",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={[]}
+  viewabilityConfigCallbackPairs={[]}
+>
+  <View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          {
+            "alignContent": "center",
+            "alignSelf": "center",
+            "justifyContent": "center",
+            "marginVertical": 5,
+            "width": "90%",
+          }
+        }
+      >
+        <View
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "borderRadius": 10,
+              "width": "100%",
+              "zIndex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#FAEDCD",
+                "borderColor": "#D4A373",
+                "borderRadius": 10,
+                "borderWidth": 3,
+                "flexDirection": "row",
+                "padding": 8,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                  "justifyContent": "space-evenly",
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "black",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Nom : PoissonPilote1
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "black",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Rareté : Common
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "black",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Prix : 900
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "height": 80,
+                  "margin": 5,
+                  "width": 80,
+                }
+              }
+            >
+              <Image
+                source={
+                  {
+                    "uri": "",
+                  }
+                }
+                style={
+                  {
+                    "height": "100%",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          collapsable={false}
+          style={
+            {
+              "alignSelf": "center",
+              "backgroundColor": "#FAEDCD",
+              "borderBottomColor": "#D4A373",
+              "borderBottomLeftRadius": 10,
+              "borderBottomRightRadius": 10,
+              "borderBottomWidth": 3,
+              "borderLeftColor": "#D4A373",
+              "borderLeftWidth": 3,
+              "borderRightColor": "#D4A373",
+              "borderRightWidth": 3,
+              "height": 100,
+              "justifyContent": "space-evenly",
+              "marginTop": 0,
+              "padding": 5,
+              "width": "90%",
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Disponibilité : Avril à Septembre
+          </Text>
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Horaire : 9am - 4pm
+          </Text>
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Localisation : River
+          </Text>
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Ombre : Small
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          {
+            "alignContent": "center",
+            "alignSelf": "center",
+            "justifyContent": "center",
+            "marginVertical": 5,
+            "width": "90%",
+          }
+        }
+      >
+        <View
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "borderRadius": 10,
+              "width": "100%",
+              "zIndex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#FAEDCD",
+                "borderColor": "#D4A373",
+                "borderRadius": 10,
+                "borderWidth": 3,
+                "flexDirection": "row",
+                "padding": 8,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                  "justifyContent": "space-evenly",
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "black",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Nom : PoissonPilote2
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "black",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Rareté : Rare
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "black",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Prix : 15000
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "height": 80,
+                  "margin": 5,
+                  "width": 80,
+                }
+              }
+            >
+              <Image
+                source={
+                  {
+                    "uri": "",
+                  }
+                }
+                style={
+                  {
+                    "height": "100%",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          collapsable={false}
+          style={
+            {
+              "alignSelf": "center",
+              "backgroundColor": "#FAEDCD",
+              "borderBottomColor": "#D4A373",
+              "borderBottomLeftRadius": 10,
+              "borderBottomRightRadius": 10,
+              "borderBottomWidth": 3,
+              "borderLeftColor": "#D4A373",
+              "borderLeftWidth": 3,
+              "borderRightColor": "#D4A373",
+              "borderRightWidth": 3,
+              "height": 100,
+              "justifyContent": "space-evenly",
+              "marginTop": 0,
+              "padding": 5,
+              "width": "90%",
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Disponibilité : Toute l'année
+          </Text>
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Horaire : Toute la journée
+          </Text>
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Localisation : Sea
+          </Text>
+          <Text
+            style={
+              {
+                "color": "black",
+                "fontSize": 14,
+              }
+            }
+          >
+            Ombre : Medium
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
