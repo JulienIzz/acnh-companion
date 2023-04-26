@@ -1,6 +1,7 @@
 import {StyleSheet, View, Dimensions} from 'react-native';
 import React from 'react';
-import {HomeButton, ButtonData} from './components/HomeButton';
+import {HomeButton} from './components/HomeButton';
+import {ButtonData} from './components/HomeButtonsData';
 
 export const NUMBER_OF_COLUMNS = 3;
 export const MAX_GRID_WIDTH = 500;
