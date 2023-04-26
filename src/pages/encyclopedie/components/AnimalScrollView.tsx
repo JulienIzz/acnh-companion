@@ -16,22 +16,8 @@ export const AnimalScrollView = ({type, data}: AnimalProps) => {
         data={data}
         renderItem={animal => (
           <ExpandableView
-            topView={
-              <TopViewAnimal
-                name={animal.item.name['name-EUfr']}
-                rarity={animal.item.availability.rarity}
-                price={animal.item.price}
-                icon={animal.item.icon_uri}
-              />
-            }
-            expandView={
-              <BottomViewFish
-                months={animal.item.availability['month-northern']}
-                hours={animal.item.availability.time}
-                location={animal.item.availability.location}
-                shadow={animal.item.shadow}
-              />
-            }
+            topView={<TopViewAnimal animal={animal.item} />}
+            expandView={<BottomViewFish animal={animal.item} />}
           />
         )}
       />
@@ -44,21 +30,8 @@ export const AnimalScrollView = ({type, data}: AnimalProps) => {
         data={data}
         renderItem={animal => (
           <ExpandableView
-            topView={
-              <TopViewAnimal
-                name={animal.item.name['name-EUfr']}
-                rarity={animal.item.availability.rarity}
-                price={animal.item.price}
-                icon={animal.item.icon_uri}
-              />
-            }
-            expandView={
-              <BottomViewBugs
-                months={animal.item.availability['month-northern']}
-                hours={animal.item.availability.time}
-                location={animal.item.availability.location}
-              />
-            }
+            topView={<TopViewAnimal animal={animal.item} />}
+            expandView={<BottomViewBugs animal={animal.item} />}
           />
         )}
       />

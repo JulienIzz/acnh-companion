@@ -2,26 +2,25 @@ import React from 'react';
 import {View, Image} from 'react-native';
 import {SimpleTypography} from '../../../theme/typography/Typography';
 import {StyleSheet} from 'react-native';
+import {Fish, Bug} from '../Types';
 
 interface TopViewProps {
-  name: string;
-  rarity: string;
-  price: number;
-  icon: string;
+  animal: Fish | Bug;
 }
-export const TopViewAnimal = ({name, rarity, price, icon}: TopViewProps) => {
+
+export const TopViewAnimal = ({animal}: TopViewProps) => {
   return (
     <>
       <View style={styles.animalID}>
-        <SimpleTypography text={'Nom : ' + name} />
-        <SimpleTypography text={'Rareté : ' + rarity} />
-        <SimpleTypography text={'Prix : ' + price} />
+        <SimpleTypography text={'Nom : ' + animal.name['name-EUfr']} />
+        <SimpleTypography text={'Rareté : ' + animal.availability.rarity} />
+        <SimpleTypography text={'Prix : ' + animal.price} />
       </View>
       <View style={styles.animalImageContainer}>
         <Image
           style={styles.animalImage}
           source={{
-            uri: icon,
+            uri: animal.icon_uri,
           }}
         />
       </View>

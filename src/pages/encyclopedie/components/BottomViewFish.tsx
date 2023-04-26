@@ -1,24 +1,22 @@
 import React from 'react';
 import {SimpleTypography} from '../../../theme/typography/Typography';
+import {Fish} from '../Types';
 
 interface BottomViewFishProps {
-  months: string;
-  hours: string;
-  location: string;
-  shadow: string;
+  animal: Fish;
 }
-export const BottomViewFish = ({
-  months,
-  hours,
-  location,
-  shadow,
-}: BottomViewFishProps) => {
+
+export const BottomViewFish = ({animal}: BottomViewFishProps) => {
   return (
     <>
-      <SimpleTypography text={'Disponibilité : ' + months} />
-      <SimpleTypography text={'Horaire : ' + hours} />
-      <SimpleTypography text={'Localisation : ' + location} />
-      <SimpleTypography text={'Ombre : ' + shadow} />
+      <SimpleTypography
+        text={'Disponibilité : ' + animal.availability['month-northern']}
+      />
+      <SimpleTypography text={'Horaire : ' + animal.availability.time} />
+      <SimpleTypography
+        text={'Localisation : ' + animal.availability.location}
+      />
+      <SimpleTypography text={'Ombre : ' + animal.shadow} />
     </>
   );
 };

@@ -3,7 +3,7 @@ import {render, screen} from '@testing-library/react-native';
 import {BottomViewBugs} from './BottomViewBugs';
 import {Bug} from '../Types';
 
-const mockFishArray: Bug[] = [
+const mockBugArray: Bug[] = [
   {
     id: 1,
     name: {
@@ -29,13 +29,7 @@ const mockFishArray: Bug[] = [
 ];
 
 test('animal bottom view card with mock bug information', async () => {
-  render(
-    <BottomViewBugs
-      months={mockFishArray[0].availability['month-northern']}
-      hours={mockFishArray[0].availability.time}
-      location={mockFishArray[0].availability.location}
-    />,
-  );
+  render(<BottomViewBugs animal={mockBugArray[0]} />);
 
   const monthsOutput = screen.getByText('Disponibilité : Avril à Septembre');
   const hoursOutput = screen.getByText('Horaire  : 9am - 4pm');

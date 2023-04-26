@@ -1,21 +1,21 @@
 import React from 'react';
 import {SimpleTypography} from '../../../theme/typography/Typography';
+import {Bug} from '../Types';
 
 interface BottomViewBugsProps {
-  months: string;
-  hours: string;
-  location: string;
+  animal: Bug;
 }
-export const BottomViewBugs = ({
-  months,
-  hours,
-  location,
-}: BottomViewBugsProps) => {
+
+export const BottomViewBugs = ({animal}: BottomViewBugsProps) => {
   return (
     <>
-      <SimpleTypography text={'Disponibilité : ' + months} />
-      <SimpleTypography text={'Horaire : ' + hours} />
-      <SimpleTypography text={'Localisation : ' + location} />
+      <SimpleTypography
+        text={'Disponibilité : ' + animal.availability['month-northern']}
+      />
+      <SimpleTypography text={'Horaire : ' + animal.availability.time} />
+      <SimpleTypography
+        text={'Localisation : ' + animal.availability.location}
+      />
     </>
   );
 };

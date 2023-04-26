@@ -32,10 +32,7 @@ const mockFishArray: Fish[] = [
 test('animal top view card with mock fish information', async () => {
   render(
     <TopViewAnimal
-      name={mockFishArray[0].name['name-EUfr']}
-      rarity={mockFishArray[0].availability.rarity}
-      price={mockFishArray[0].price}
-      icon={mockFishArray[0].icon_uri}
+      animal={mockFishArray[0]}
     />,
   );
 

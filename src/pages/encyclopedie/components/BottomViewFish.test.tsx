@@ -30,14 +30,7 @@ const mockFishArray: Fish[] = [
 ];
 
 test('animal bottom view card with mock fish information', async () => {
-  render(
-    <BottomViewFish
-      months={mockFishArray[0].availability['month-northern']}
-      hours={mockFishArray[0].availability.time}
-      location={mockFishArray[0].availability.location}
-      shadow={mockFishArray[0].shadow}
-    />,
-  );
+  render(<BottomViewFish animal={mockFishArray[0]} />);
 
   const monthsOutput = screen.getByText('Disponibilité : Avril à Septembre');
   const hoursOutput = screen.getByText('Horaire  : 9am - 4pm');
