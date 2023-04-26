@@ -10,8 +10,8 @@ describe('AdaptAnimalData', () => {
         'name-EUfr': 'PoissonPilote',
       },
       availability: {
-        'month-northern': '4 - 9',
-        'month-southern': '4 - 9',
+        'month-northern': '4-9',
+        'month-southern': '4-9',
         'month-array-northern': [1, 2],
         'month-array-southern': [1, 2],
         time: '9am - 4pm',
