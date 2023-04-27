@@ -2,10 +2,10 @@ import React from 'react';
 import {View, Image} from 'react-native';
 import {SimpleTypography} from '../../../theme/typography/Typography';
 import {StyleSheet} from 'react-native';
-import {Fish, Bug} from '../Types';
+import {Animal} from '../Types';
 
 interface TopViewProps {
-  animal: Fish | Bug;
+  animal: Animal;
 }
 
 export const TopViewAnimal = ({animal}: TopViewProps) => {

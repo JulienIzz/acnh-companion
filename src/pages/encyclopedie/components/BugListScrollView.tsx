@@ -1,4 +1,4 @@
-import type {Bug} from '../Types';
+import type {Animal} from '../Types';
 import {TabStackParamList} from '../Encyclopedie';
 import {RouteProp} from '@react-navigation/native';
 import {AnimalScrollView} from './AnimalScrollView';
@@ -10,6 +10,6 @@ type BugProps = {
 };
 
 export function BugListScrollView({route}: BugProps) {
-  const bugList: Bug[] = route.params.bugList;
-  return <AnimalScrollView type="bug" data={bugList} />;
+  const bugList: Animal[] = route.params.bugList;
+  return <AnimalScrollView type='bug' data={bugList} />;
 }

@@ -1,9 +1,9 @@
-import {Bug, Fish} from '../../encyclopedie/Types';
+import {Animal} from '../../encyclopedie/Types';
 import {CapitalizeFirstLetters} from './CapitalizeString';
 import {FormatDateIntervalIntoString} from './FormatDateIntervalIntoString';
 import {FormatHoursIntervalIntoString} from './FormatHoursIntervalIntoString';
 
-export const AdaptAnimalData = (animal: Fish | Bug) => {
+export const AdaptAnimalData = (animal: Animal | Animal) => {
   animal.availability['month-northern'] = FormatDateIntervalIntoString(
     animal.availability['month-northern'],
   );

@@ -1,14 +1,14 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
-import {Fish} from '../Types';
+import {Animal} from '../Types';
 import {FishListScrollView} from './FishListScrollView';
 import {RouteProp} from '@react-navigation/native';
 
 type mockTabStackParamList = {
-  Fish: {fishList: Fish[]};
+  Fish: {fishList: Animal[]};
 };
 
-const mockFishArray: Fish[] = [
+const mockFishArray: Animal[] = [
   {
     id: 1,
     name: {

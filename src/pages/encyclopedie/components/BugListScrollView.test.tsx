@@ -1,14 +1,14 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
-import {Bug} from '../Types';
+import {Animal} from '../Types';
 import {BugListScrollView} from './BugListScrollView';
 import {RouteProp} from '@react-navigation/native';
 
 type mockTabStackParamList = {
-  Bug: {bugList: Bug[]};
+  Bug: {bugList: Animal[]};
 };
 
-const mockBugArray: Bug[] = [
+const mockBugArray: Animal[] = [
   {
     id: 1,
     name: {

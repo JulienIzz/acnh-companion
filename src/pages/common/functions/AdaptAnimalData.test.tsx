@@ -1,9 +1,9 @@
-import {Fish} from '../../encyclopedie/Types';
+import {Animal} from '../../encyclopedie/Types';
 import {AdaptAnimalData} from './AdaptAnimalData';
 
 describe('AdaptAnimalData', () => {
   it('should update the availability fields for non-empty input', () => {
-    const input: Fish = {
+    const input: Animal = {
       id: 1,
       name: {
         'name-USen': 'PoissonPilote',
@@ -43,7 +43,7 @@ describe('AdaptAnimalData', () => {
   });
 
   it('should handle empty input for both availability fields', () => {
-    const input: Fish = {
+    const input: Animal = {
       id: 1,
       name: {
         'name-USen': 'PoissonPilote',

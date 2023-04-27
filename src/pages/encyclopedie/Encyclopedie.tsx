@@ -1,6 +1,6 @@
 import {View, Image, ImageSourcePropType} from 'react-native';
 import {Header} from '../header/Header';
-import type {Bug, Fish} from './Types';
+import type {Animal} from './Types';
 import {FishListScrollView} from './components/FishListScrollView';
 import {BugListScrollView} from './components/BugListScrollView';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
@@ -17,8 +17,8 @@ const BUG_ICON_IMAGE_PATH = require('./img/bug.png');
 const Tab = createMaterialTopTabNavigator<TabStackParamList>();
 
 export type TabStackParamList = {
-  Fish: {fishList: Fish[]};
-  Bug: {bugList: Bug[]};
+  Fish: {fishList: Animal[]};
+  Bug: {bugList: Animal[]};
 };
 
 export const Encyclopedie = () => {

@@ -1,10 +1,10 @@
-import {Bug} from '../../encyclopedie/Types';
+import {Animal} from '../../encyclopedie/Types';
 import {useQuery} from 'react-query';
 import {AdaptAnimalData} from './AdaptAnimalData';
 
-async function FetchBugs(): Promise<Bug[]> {
+async function FetchBugs(): Promise<Animal[]> {
   const response = await fetch('https://acnhapi.com/v1/bugs', {method: 'GET'});
-  let data: Bug[] = Object.values(await response.json());
+  let data: Animal[] = Object.values(await response.json());
   data.forEach(animal => AdaptAnimalData(animal));
   return data;
 }

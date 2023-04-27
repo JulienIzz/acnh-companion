@@ -1,9 +1,9 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
 import {TopViewAnimal} from './TopViewAnimal';
-import {Fish} from '../Types';
+import {Animal} from '../Types';
 
-const mockFishArray: Fish[] = [
+const mockFishArray: Animal[] = [
   {
     id: 1,
     name: {
@@ -30,11 +30,7 @@ const mockFishArray: Fish[] = [
 ];
 
 test('animal top view card with mock fish information', async () => {
-  render(
-    <TopViewAnimal
-      animal={mockFishArray[0]}
-    />,
-  );
+  render(<TopViewAnimal animal={mockFishArray[0]} />);
 
   const nameOutput = screen.getByText('Nom : PoissonPilote1');
   const priceOutput = screen.getByText('Prix : 900');

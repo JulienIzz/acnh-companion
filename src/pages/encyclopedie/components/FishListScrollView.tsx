@@ -1,4 +1,4 @@
-import type {Fish} from '../Types';
+import type {Animal} from '../Types';
 import {TabStackParamList} from '../Encyclopedie';
 import {RouteProp} from '@react-navigation/native';
 import {AnimalScrollView} from './AnimalScrollView';
@@ -10,6 +10,6 @@ type FishProps = {
 };
 
 export function FishListScrollView({route}: FishProps) {
-  const fishList: Fish[] = route.params.fishList;
+  const fishList: Animal[] = route.params.fishList;
   return <AnimalScrollView type="fish" data={fishList} />;
 }
