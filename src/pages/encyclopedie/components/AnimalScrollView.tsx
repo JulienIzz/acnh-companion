@@ -1,42 +1,23 @@
-import {FlatList, ActivityIndicator} from 'react-native';
+import {FlatList} from 'react-native';
 import {ExpandableView} from '../../common/components/ExpandableView';
-import {Fish, Bug} from '../Types';
-import {BottomViewBugs} from './BottomViewBugs';
+import {Animal} from '../Types';
 import {TopViewAnimal} from './TopViewAnimal';
-import {BottomViewFish} from './BottomViewFish';
+import {BottomViewAnimal} from './BottomViewAnimal';
 import React from 'react';
 
-type AnimalProps = {type: 'fish'; data: Fish[]} | {type: 'bug'; data: Bug[]};
+type AnimalProps = Animal[];
 
-export const AnimalScrollView = ({type, data}: AnimalProps) => {
-  if (type === 'fish') {
-    return (
-      <FlatList
-        horizontal={false}
-        data={data}
-        renderItem={animal => (
-          <ExpandableView
-            topView={<TopViewAnimal animal={animal.item} />}
-            expandView={<BottomViewFish animal={animal.item} />}
-          />
-        )}
-      />
-    );
-  }
-  if (type === 'bug') {
-    return (
-      <FlatList
-        horizontal={false}
-        data={data}
-        renderItem={animal => (
-          <ExpandableView
-            topView={<TopViewAnimal animal={animal.item} />}
-            expandView={<BottomViewBugs animal={animal.item} />}
-          />
-        )}
-      />
-    );
-  } else {
-    return <ActivityIndicator />;
-  }
+export const AnimalScrollView = ({data}: {data: AnimalProps}) => {
+  return (
+    <FlatList
+      horizontal={false}
+      data={data}
+      renderItem={animal => (
+        <ExpandableView
+          topView={<TopViewAnimal animal={animal.item} />}
+          expandView={<BottomViewAnimal animal={animal.item} />}
+        />
+      )}
+    />
+  );
 };

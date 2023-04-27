@@ -11,5 +11,5 @@ type BugProps = {
 
 export function BugListScrollView({route}: BugProps) {
   const bugList: Animal[] = route.params.bugList;
-  return <AnimalScrollView type='bug' data={bugList} />;
+  return <AnimalScrollView data={bugList} />;
 }

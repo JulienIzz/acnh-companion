@@ -11,5 +11,5 @@ type FishProps = {
 
 export function FishListScrollView({route}: FishProps) {
   const fishList: Animal[] = route.params.fishList;
-  return <AnimalScrollView type="fish" data={fishList} />;
+  return <AnimalScrollView data={fishList} />;
 }
