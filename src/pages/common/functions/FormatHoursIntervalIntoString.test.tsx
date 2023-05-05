@@ -3,7 +3,7 @@ import {FormatHoursIntervalIntoString} from './FormatHoursIntervalIntoString';
 describe('FormatHoursIntervalIntoString', () => {
   it('should return the input availability string when it is not empty', () => {
     const input = '9am - 6pm';
-    const expectedResult = '9am - 6pm';
+    const expectedResult = '09h - 18h';
 
     const result = FormatHoursIntervalIntoString(input);
 
