@@ -20,6 +20,7 @@ const mockFishArray: Animal[] = [
       isAllYear: false,
       location: 'River',
       rarity: 'Common',
+      'time-array': [9, 10, 11, 12, 13, 14, 15, 16],
     },
     'price-cj': 1200,
     icon_uri: '',

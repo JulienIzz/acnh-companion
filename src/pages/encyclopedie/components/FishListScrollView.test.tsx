@@ -21,6 +21,7 @@ const mockFishArray: Animal[] = [
       'month-array-northern': [1, 2],
       'month-array-southern': [1, 2],
       time: '9am - 4pm',
+      'time-array': [9, 10, 11, 12, 13, 14, 15, 16],
       isAllDay: false,
       isAllYear: false,
       location: 'River',
@@ -44,6 +45,10 @@ const mockFishArray: Animal[] = [
       'month-array-northern': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       'month-array-southern': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       time: 'Toute la journée',
+      'time-array': [
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23,
+      ],
       isAllDay: true,
       isAllYear: true,
       location: 'Sea',
