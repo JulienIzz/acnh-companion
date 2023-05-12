@@ -14,7 +14,7 @@ import {AnimalScrollView} from '../encyclopedie/components/AnimalScrollView';
 import {useState} from 'react';
 import {Animal} from '../encyclopedie/Types';
 import {Dropdown} from 'react-native-element-dropdown';
-import {monthData} from './filterData';
+import {monthData, hourData} from './filterData';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
 
@@ -23,6 +23,7 @@ const screenWidth = Dimensions.get('window').width;
 interface FiltersTypes {
   name: string;
   month: number | null;
+  hour: number | null;
 }
 export const SearchPage = () => {
   const {data: fishList, isLoading: isFishLoading} = useFetchFishes();
@@ -32,6 +33,7 @@ export const SearchPage = () => {
   const [filters, setFilters] = useState<FiltersTypes>({
     name: '',
     month: null,
+    hour: null,
   });
 
   if (!isFishLoading && !isBugLoading && animalData !== undefined) {
@@ -42,6 +44,9 @@ export const SearchPage = () => {
           .includes(filters.name.toLowerCase()) &&
         (filters.month !== null
           ? animal.availability['month-array-northern'].includes(filters.month)
+          : true) &&
+        (filters.hour !== null
+          ? animal.availability['time-array'].includes(filters.hour)
           : true),
     );
 
@@ -110,6 +115,23 @@ export const SearchPage = () => {
                 setFilters(previousFilters => ({
                   ...previousFilters,
                   month: item.value,
+                }))
+              }
+            />
+            <Dropdown
+              style={styles.selectZone}
+              data={hourData}
+              itemTextStyle={{color: 'black'}}
+              selectedTextStyle={{color: 'black'}}
+              labelField="label"
+              valueField="value"
+              placeholder="Heure"
+              autoScroll
+              placeholderStyle={{color: 'gray'}}
+              onChange={item =>
+                setFilters(previousFilters => ({
+                  ...previousFilters,
+                  hour: item.value,
                 }))
               }
             />
