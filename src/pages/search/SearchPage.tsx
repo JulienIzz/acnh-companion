@@ -3,6 +3,7 @@ import {
   Dimensions,
   Image,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -14,6 +15,7 @@ import {AnimalScrollView} from '../encyclopedie/components/AnimalScrollView';
 import {useState} from 'react';
 import {Animal} from '../encyclopedie/Types';
 import {Dropdown} from 'react-native-element-dropdown';
+import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import {monthData, hourData} from './filterData';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
@@ -24,6 +26,8 @@ interface FiltersTypes {
   name: string;
   month: number | null;
   hour: number | null;
+  minPrice: number;
+  maxPrice: number;
 }
 export const SearchPage = () => {
   const {data: fishList, isLoading: isFishLoading} = useFetchFishes();
@@ -34,9 +38,13 @@ export const SearchPage = () => {
     name: '',
     month: null,
     hour: null,
+    minPrice: 0,
+    maxPrice: 15000,
   });
 
   if (!isFishLoading && !isBugLoading && animalData !== undefined) {
+    const maxValue = animalData === fishList ? 15000 : 12000;
+
     const filteredList = animalData.filter(
       animal =>
         animal.name['name-EUfr']
@@ -47,7 +55,9 @@ export const SearchPage = () => {
           : true) &&
         (filters.hour !== null
           ? animal.availability['time-array'].includes(filters.hour)
-          : true),
+          : true) &&
+        filters.minPrice <= animal.price &&
+        filters.maxPrice >= animal.price,
     );
 
     return (
@@ -58,7 +68,15 @@ export const SearchPage = () => {
         />
         <View style={styles.filterZone}>
           <View style={styles.rowFilterWrapper}>
-            <TouchableOpacity onPress={() => setAnimalData(fishList)}>
+            <TouchableOpacity
+              onPress={() => {
+                setAnimalData(fishList);
+                setFilters(previousFilters => ({
+                  ...previousFilters,
+                  minPrice: 0,
+                  maxPrice: maxValue,
+                }));
+              }}>
               <View
                 style={[
                   styles.animalTypeButton,
@@ -73,7 +91,15 @@ export const SearchPage = () => {
                 />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => setAnimalData(bugList)}>
+            <TouchableOpacity
+              onPress={() => {
+                setAnimalData(bugList);
+                setFilters(previousFilters => ({
+                  ...previousFilters,
+                  minPrice: 0,
+                  maxPrice: maxValue,
+                }));
+              }}>
               <View
                 style={[
                   styles.animalTypeButton,
@@ -136,7 +162,34 @@ export const SearchPage = () => {
               }
             />
           </View>
+          <MultiSlider
+            values={[0, maxValue]}
+            sliderLength={280}
+            min={0}
+            max={maxValue}
+            step={1000}
+            enableLabel={true}
+            customLabel={value => (
+              <View style={styles.sliderLabels}>
+                <Text style={styles.slideMinMaxPrice}>
+                  {value.oneMarkerValue}
+                </Text>
+                <Text style={styles.sliderPriceText}>PRIX</Text>
+                <Text style={styles.slideMinMaxPrice}>
+                  {value.twoMarkerValue}
+                </Text>
+              </View>
+            )}
+            onValuesChangeFinish={value =>
+              setFilters(previousFilters => ({
+                ...previousFilters,
+                minPrice: value[0],
+                maxPrice: value[1],
+              }))
+            }
+          />
         </View>
+
         <AnimalScrollView data={filteredList} />
       </View>
     );
@@ -174,4 +227,11 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     color: 'black',
   },
+  sliderLabels: {
+    flexDirection: 'row',
+    marginBottom: -12,
+    justifyContent: 'space-between',
+  },
+  slideMinMaxPrice: {width: 40, color: 'black'},
+  sliderPriceText: {fontWeight: 'bold', color: 'black'},
 });
