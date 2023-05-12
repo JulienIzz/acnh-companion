@@ -3,6 +3,7 @@ import {
   Dimensions,
   Image,
   StyleSheet,
+  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -12,16 +13,31 @@ import {useFetchFishes} from '../common/functions/FetchFishes';
 import {AnimalScrollView} from '../encyclopedie/components/AnimalScrollView';
 import {useState} from 'react';
 import {Animal} from '../encyclopedie/Types';
+
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
 
 const screenWidth = Dimensions.get('window').width;
 
+interface FiltersTypes {
+  name: string;
+}
 export const SearchPage = () => {
   const {data: fishList, isLoading: isFishLoading} = useFetchFishes();
   const {data: bugList, isLoading: isBugLoading} = useFetchBugs();
+
   const [animalData, setAnimalData] = useState<Animal[] | undefined>(fishList);
-  if (!isFishLoading && !isBugLoading) {
+  const [filters, setFilters] = useState<FiltersTypes>({
+    name: '',
+  });
+
+  if (!isFishLoading && !isBugLoading && animalData !== undefined) {
+    const filteredList = animalData.filter(animal =>
+      animal.name['name-EUfr']
+        .toLowerCase()
+        .includes(filters.name.toLowerCase()),
+    );
+
     return (
       <View style={{flex: 1}}>
         <Header
@@ -60,9 +76,21 @@ export const SearchPage = () => {
                 />
               </View>
             </TouchableOpacity>
+            <TextInput
+              style={styles.selectZone}
+              placeholder="Nom"
+              placeholderTextColor={'gray'}
+              onChangeText={text =>
+                setFilters(previousFilters => ({
+                  ...previousFilters,
+                  name: text,
+                }))
+              }
+              value={filters.name}
+            />
           </View>
         </View>
-        <AnimalScrollView data={animalData} />
+        <AnimalScrollView data={filteredList} />
       </View>
     );
   } else {
@@ -87,5 +115,16 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  selectZone: {
+    height: 40,
+    flex: 1,
+    padding: 10,
+    margin: 10,
+    borderRadius: 5,
+    borderColor: 'gray',
+    borderWidth: 1,
+    alignContent: 'center',
+    color: 'black',
   },
 });

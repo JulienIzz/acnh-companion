@@ -5,7 +5,7 @@ import {TopViewAnimal} from './TopViewAnimal';
 import {BottomViewAnimal} from './BottomViewAnimal';
 import React from 'react';
 
-type AnimalProps = Animal[] | undefined;
+type AnimalProps = Animal[];
 
 export const AnimalScrollView = ({data}: {data: AnimalProps}) => {
   return (
