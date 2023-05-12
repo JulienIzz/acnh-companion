@@ -16,6 +16,7 @@
     "nock": "^13.3.0",
     "react": "18.2.0",
     "react-native": "0.71.1",
+    "react-native-element-dropdown": "<=2.5.3",
     "react-native-pager-view": "^6.1.4",
     "react-native-safe-area-context": "^4.5.0",
     "react-native-screens": "^3.20.0",
