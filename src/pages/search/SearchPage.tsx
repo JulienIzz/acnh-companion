@@ -17,18 +17,20 @@ import {Animal} from '../encyclopedie/Types';
 import {Dropdown} from 'react-native-element-dropdown';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import {monthData, hourData} from './filterData';
+import {filterAnimalList} from './functions/filterAnimalList';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
 
 const screenWidth = Dimensions.get('window').width;
 
-interface FiltersTypes {
+export interface FiltersTypes {
   name: string;
   month: number | null;
   hour: number | null;
   minPrice: number;
   maxPrice: number;
 }
+
 export const SearchPage = () => {
   const {data: fishList, isLoading: isFishLoading} = useFetchFishes();
   const {data: bugList, isLoading: isBugLoading} = useFetchBugs();
@@ -45,20 +47,7 @@ export const SearchPage = () => {
   if (!isFishLoading && !isBugLoading && animalData !== undefined) {
     const maxValue = animalData === fishList ? 15000 : 12000;
 
-    const filteredList = animalData.filter(
-      animal =>
-        animal.name['name-EUfr']
-          .toLowerCase()
-          .includes(filters.name.toLowerCase()) &&
-        (filters.month !== null
-          ? animal.availability['month-array-northern'].includes(filters.month)
-          : true) &&
-        (filters.hour !== null
-          ? animal.availability['time-array'].includes(filters.hour)
-          : true) &&
-        filters.minPrice <= animal.price &&
-        filters.maxPrice >= animal.price,
-    );
+    const filteredList = filterAnimalList(animalData, filters);
 
     return (
       <View style={{flex: 1}}>
