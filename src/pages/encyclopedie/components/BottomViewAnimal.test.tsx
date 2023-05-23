@@ -1,34 +1,7 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
 import {BottomViewAnimal} from './BottomViewAnimal';
-import {Animal} from '../Types';
-
-const mockFishArray: Animal[] = [
-  {
-    id: 1,
-    name: {
-      'name-USen': 'PoissonPilote1',
-      'name-EUfr': 'PoissonPilote1',
-    },
-    availability: {
-      'month-northern': 'Avril à Septembre',
-      'month-southern': 'Avril à Septembre',
-      'month-array-northern': [1, 2],
-      'month-array-southern': [1, 2],
-      time: '9am - 4pm',
-      'time-array': [9, 10, 11, 12, 13, 14, 15, 16],
-      isAllDay: false,
-      isAllYear: false,
-      location: 'River',
-      rarity: 'Common',
-    },
-    'price-cj': 1200,
-    icon_uri: '',
-    image_uri: '',
-    shadow: 'Small',
-    price: 900,
-  },
-];
+import {mockFishArray} from '../../../tests/mockFishArray';
 
 test('animal bottom view card with mock fish information', async () => {
   render(<BottomViewAnimal animal={mockFishArray[0]} />);

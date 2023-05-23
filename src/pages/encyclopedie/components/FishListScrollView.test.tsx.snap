@@ -10,12 +10,20 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
           "isAllYear": false,
           "location": "River",
           "month-array-northern": [
-            1,
-            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
           ],
           "month-array-southern": [
-            1,
-            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
           ],
           "month-northern": "Avril à Septembre",
           "month-southern": "Avril à Septembre",
@@ -39,8 +47,8 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
           "name-EUfr": "PoissonPilote1",
           "name-USen": "PoissonPilote1",
         },
-        "price": 900,
-        "price-cj": 1200,
+        "price": 2000,
+        "price-cj": 2500,
         "shadow": "Small",
       },
       {
@@ -114,8 +122,8 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
           "name-EUfr": "PoissonPilote2",
           "name-USen": "PoissonPilote2",
         },
-        "price": 15000,
-        "price-cj": 18000,
+        "price": 10000,
+        "price-cj": 12000,
         "shadow": "Medium",
       },
     ]
@@ -230,7 +238,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
                   }
                 }
               >
-                Prix : 900
+                Prix : 2000
               </Text>
             </View>
             <View
@@ -415,7 +423,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
                   }
                 }
               >
-                Prix : 15000
+                Prix : 10000
               </Text>
             </View>
             <View

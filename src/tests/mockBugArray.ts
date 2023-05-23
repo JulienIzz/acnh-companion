@@ -10,8 +10,8 @@ export const mockBugArray: Animal[] = [
     availability: {
       'month-northern': 'Avril à Septembre',
       'month-southern': 'Avril à Septembre',
-      'month-array-northern': [1, 2],
-      'month-array-southern': [1, 2],
+      'month-array-northern': [4, 5, 6, 7, 8, 9],
+      'month-array-southern': [4, 5, 6, 7, 8, 9],
       time: '9am - 4pm',
       'time-array': [9, 10, 11, 12, 13, 14, 15, 16],
       isAllDay: false,
