@@ -1,4 +1,4 @@
-export const FormatHoursIntervalIntoString = (availability: string) => {
+export const formatHoursIntervalIntoString = (availability: string) => {
   if (availability == '') {
     return 'Toute la journée';
   }

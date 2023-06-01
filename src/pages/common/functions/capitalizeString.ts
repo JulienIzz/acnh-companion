@@ -1,4 +1,4 @@
-export const CapitalizeFirstLetters = (string: string) => {
+export const capitalizeFirstLetters = (string: string) => {
   const arrayWithEachWord = string.split(' ');
   for (
     var wordToCapitalize = 0;

@@ -1,11 +1,11 @@
-import {FormatHoursIntervalIntoString} from './FormatHoursIntervalIntoString';
+import {formatHoursIntervalIntoString} from './formatHoursIntervalIntoString';
 
 describe('FormatHoursIntervalIntoString', () => {
   it('should return the input availability string when it is not empty', () => {
     const input = '9am - 6pm';
     const expectedResult = '09h - 18h';
 
-    const result = FormatHoursIntervalIntoString(input);
+    const result = formatHoursIntervalIntoString(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -14,7 +14,7 @@ describe('FormatHoursIntervalIntoString', () => {
     const input = '';
     const expectedResult = 'Toute la journée';
 
-    const result = FormatHoursIntervalIntoString(input);
+    const result = formatHoursIntervalIntoString(input);
 
     expect(result).toEqual(expectedResult);
   });

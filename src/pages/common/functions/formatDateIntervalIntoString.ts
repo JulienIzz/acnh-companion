@@ -1,4 +1,4 @@
-export const FormatDateIntervalIntoString = (availability: string) => {
+export const formatDateIntervalIntoString = (availability: string) => {
   if (availability == '') {
     return "Toute l'année";
   }

@@ -1,11 +1,11 @@
-import {CapitalizeFirstLetters} from './CapitalizeString';
+import {capitalizeFirstLetters} from './capitalizeString';
 
 describe('CapitalizeFirstLetters', () => {
   it('should capitalize the first letter of each word in the string', () => {
     const input = 'hello world';
     const expectedResult = 'Hello World';
 
-    const result = CapitalizeFirstLetters(input);
+    const result = capitalizeFirstLetters(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -14,7 +14,7 @@ describe('CapitalizeFirstLetters', () => {
     const input = '';
     const expectedResult = '';
 
-    const result = CapitalizeFirstLetters(input);
+    const result = capitalizeFirstLetters(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -23,7 +23,7 @@ describe('CapitalizeFirstLetters', () => {
     const input = 'reactnative';
     const expectedResult = 'Reactnative';
 
-    const result = CapitalizeFirstLetters(input);
+    const result = capitalizeFirstLetters(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -32,7 +32,7 @@ describe('CapitalizeFirstLetters', () => {
     const input = '  hello world  ';
     const expectedResult = '  Hello World  ';
 
-    const result = CapitalizeFirstLetters(input);
+    const result = capitalizeFirstLetters(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -41,7 +41,7 @@ describe('CapitalizeFirstLetters', () => {
     const input = 'Hello World';
     const expectedResult = 'Hello World';
 
-    const result = CapitalizeFirstLetters(input);
+    const result = capitalizeFirstLetters(input);
 
     expect(result).toEqual(expectedResult);
   });

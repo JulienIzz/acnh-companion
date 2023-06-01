@@ -1,5 +1,5 @@
 import {Animal} from '../../encyclopedie/Types';
-import {AdaptAnimalData} from './AdaptAnimalData';
+import {adaptAnimalData} from './adaptAnimalData';
 
 describe('AdaptAnimalData', () => {
   it('should update the availability fields for non-empty input', () => {
@@ -35,7 +35,7 @@ describe('AdaptAnimalData', () => {
       },
     };
 
-    AdaptAnimalData(input);
+    adaptAnimalData(input);
 
     expect(input.availability['month-northern']).toEqual(
       expectedResult.availability['month-northern'],
@@ -79,7 +79,7 @@ describe('AdaptAnimalData', () => {
       },
     };
 
-    AdaptAnimalData(input);
+    adaptAnimalData(input);
 
     expect(input.availability['month-northern']).toEqual(
       expectedResult.availability['month-northern'],

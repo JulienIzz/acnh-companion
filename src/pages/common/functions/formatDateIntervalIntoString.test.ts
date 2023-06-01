@@ -1,11 +1,11 @@
-import {FormatDateIntervalIntoString} from './FormatDateIntervalIntoString';
+import {formatDateIntervalIntoString} from './formatDateIntervalIntoString';
 
 describe('FormatDateIntervalIntoString', () => {
   it('should return the formatted date interval when the input is not empty', () => {
     const input = '9-6';
     const expectedResult = 'Septembre à Juin';
 
-    const result = FormatDateIntervalIntoString(input);
+    const result = formatDateIntervalIntoString(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -14,7 +14,7 @@ describe('FormatDateIntervalIntoString', () => {
     const input = '';
     const expectedResult = "Toute l'année";
 
-    const result = FormatDateIntervalIntoString(input);
+    const result = formatDateIntervalIntoString(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -23,7 +23,7 @@ describe('FormatDateIntervalIntoString', () => {
     const input = '8-11';
     const expectedResult = 'Aout à Novembre';
 
-    const result = FormatDateIntervalIntoString(input);
+    const result = formatDateIntervalIntoString(input);
 
     expect(result).toEqual(expectedResult);
   });
@@ -32,7 +32,7 @@ describe('FormatDateIntervalIntoString', () => {
     const input = '10-3';
     const expectedResult = 'Octobre à Mars';
 
-    const result = FormatDateIntervalIntoString(input);
+    const result = formatDateIntervalIntoString(input);
 
     expect(result).toEqual(expectedResult);
   });
