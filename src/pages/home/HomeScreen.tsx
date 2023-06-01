@@ -1,4 +1,4 @@
-import {View, FlatList, ScrollView} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import {Header} from '../header/Header';
 import {HOME_SCREEN_BUTTONS_DATASET} from './components/HomeButtonsData';
