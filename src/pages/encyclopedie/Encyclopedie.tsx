@@ -4,8 +4,8 @@ import type {Animal} from './Types';
 import {FishListScrollView} from './components/FishListScrollView';
 import {BugListScrollView} from './components/BugListScrollView';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import {useFetchFishes} from '../common/functions/FetchFishes';
-import {useFetchBugs} from '../common/functions/FetchBugs';
+import {useFetchFishes} from '../common/functions/fetchFishes';
+import {useFetchBugs} from '../common/functions/fetchBugs';
 import {LoadingPage} from '../common/components/LoadingPage';
 
 const HEADER_ENCYCLOPEDIA_TEXT = 'Encyclopédie';

@@ -9,8 +9,8 @@ import {
   View,
 } from 'react-native';
 import {LoadingPage} from '../common/components/LoadingPage';
-import {useFetchBugs} from '../common/functions/FetchBugs';
-import {useFetchFishes} from '../common/functions/FetchFishes';
+import {useFetchBugs} from '../common/functions/fetchBugs';
+import {useFetchFishes} from '../common/functions/fetchFishes';
 import {AnimalScrollView} from '../encyclopedie/components/AnimalScrollView';
 import {useState} from 'react';
 import {Animal} from '../encyclopedie/Types';

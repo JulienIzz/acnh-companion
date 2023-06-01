@@ -2,8 +2,8 @@ import {View, FlatList, ScrollView} from 'react-native';
 import React from 'react';
 import {Header} from '../header/Header';
 import {HOME_SCREEN_BUTTONS_DATASET} from './components/HomeButtonsData';
-import {useFetchBugs} from '../common/functions/FetchBugs';
-import {useFetchFishes} from '../common/functions/FetchFishes';
+import {useFetchBugs} from '../common/functions/fetchBugs';
+import {useFetchFishes} from '../common/functions/fetchFishes';
 import {LoadingPage} from '../common/components/LoadingPage';
 import {HomeScreenGrid} from './HomeScreenGrid';
 
