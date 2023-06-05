@@ -14,6 +14,11 @@ export const HOME_SCREEN_BUTTONS_DATASET: ButtonData[] = [
     navigationTarget: 'Encyclopedie',
   },
   {
+    label: 'Recherche',
+    imagePath: require('../img/tracker.png'),
+    navigationTarget: 'Search',
+  },
+  {
     label: 'Test',
     imagePath: require('../img/bugs.png'),
     navigationTarget: 'Test',

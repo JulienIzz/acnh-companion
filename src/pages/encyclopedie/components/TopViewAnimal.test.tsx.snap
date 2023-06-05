@@ -38,7 +38,7 @@ exports[`animal top view card with mock fish information 1`] = `
         }
       }
     >
-      Prix : 900
+      Prix : 2000
     </Text>
   </View>,
   <View

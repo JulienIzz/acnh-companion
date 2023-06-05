@@ -14,6 +14,7 @@ export interface Animal {
     rarity: string;
     'month-array-northern': Array<number>;
     'month-array-southern': Array<number>;
+    'time-array': Array<number>;
   };
   shadow?: string;
   price: number;
