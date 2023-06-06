@@ -19,6 +19,7 @@ import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import {monthData, hourData} from './filterData';
 import {filterAnimalList} from './functions/filterAnimalList';
 import {getActualMonthAndHour} from './functions/getActualMonthAndHour';
+import {resetFilters} from './functions/resetFilters';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
 
@@ -120,6 +121,17 @@ export const SearchPage = () => {
               }
               value={filters.name}
             />
+            <TouchableOpacity
+              onPress={resetFilters(setFilters, dynamicMaxValue)}
+              style={styles.animalTypeTouchable}>
+              <View
+                style={[styles.animalTypeButton, {backgroundColor: '#E7401D'}]}>
+                <Image
+                  style={{width: 15, height: 15}}
+                  source={require('./img/cross.png')}
+                />
+              </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.rowFilterWrapper}>
             <Dropdown
