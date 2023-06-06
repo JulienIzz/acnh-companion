@@ -129,6 +129,7 @@ export const SearchPage = () => {
               valueField="value"
               placeholder="Mois"
               autoScroll
+              value={filters.month}
               placeholderStyle={{color: 'gray'}}
               onChange={item =>
                 setFilters(previousFilters => ({
@@ -146,6 +147,7 @@ export const SearchPage = () => {
               valueField="value"
               placeholder="Heure"
               autoScroll
+              value={filters.hour}
               placeholderStyle={{color: 'gray'}}
               onChange={item =>
                 setFilters(previousFilters => ({
