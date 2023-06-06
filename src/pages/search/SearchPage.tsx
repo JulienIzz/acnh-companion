@@ -24,7 +24,7 @@ const HEADER_SEARCH_TEXT = 'Recherche';
 
 const screenWidth = Dimensions.get('window').width;
 const sliderScreenRatio = 0.78;
-
+const maxPrice = {fish: 15000, bug: 12000};
 export interface FiltersTypes {
   name: string;
   month: number | null;
@@ -47,7 +47,8 @@ export const SearchPage = () => {
   });
 
   if (!isFishLoading && !isBugLoading && animalData !== undefined) {
-    const maxValue = animalData === fishList ? 15000 : 12000;
+    const dynamicMaxValue =
+      animalData === fishList ? maxPrice.fish : maxPrice.bug;
 
     const filteredList = filterAnimalList(animalData, filters);
 
@@ -65,7 +66,7 @@ export const SearchPage = () => {
                 setFilters(previousFilters => ({
                   ...previousFilters,
                   minPrice: 0,
-                  maxPrice: maxValue,
+                  maxPrice: maxPrice.fish,
                 }));
               }}
               style={styles.animalTypeTouchable}>
@@ -89,7 +90,7 @@ export const SearchPage = () => {
                 setFilters(previousFilters => ({
                   ...previousFilters,
                   minPrice: 0,
-                  maxPrice: maxValue,
+                  maxPrice: maxPrice.bug,
                 }));
               }}
               style={styles.animalTypeTouchable}>
@@ -176,10 +177,10 @@ export const SearchPage = () => {
             />
           </View>
           <MultiSlider
-            values={[0, maxValue]}
+            values={[filters.minPrice, filters.maxPrice]}
             sliderLength={screenWidth * sliderScreenRatio}
             min={0}
-            max={maxValue}
+            max={dynamicMaxValue}
             step={1000}
             enableLabel={true}
             customLabel={value => (
