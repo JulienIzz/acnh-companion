@@ -22,6 +22,7 @@ const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
 
 const screenWidth = Dimensions.get('window').width;
+const sliderScreenRatio = 0.78;
 
 export interface FiltersTypes {
   name: string;
@@ -65,7 +66,8 @@ export const SearchPage = () => {
                   minPrice: 0,
                   maxPrice: maxValue,
                 }));
-              }}>
+              }}
+              style={styles.animalTypeTouchable}>
               <View
                 style={[
                   styles.animalTypeButton,
@@ -88,7 +90,8 @@ export const SearchPage = () => {
                   minPrice: 0,
                   maxPrice: maxValue,
                 }));
-              }}>
+              }}
+              style={styles.animalTypeTouchable}>
               <View
                 style={[
                   styles.animalTypeButton,
@@ -153,7 +156,7 @@ export const SearchPage = () => {
           </View>
           <MultiSlider
             values={[0, maxValue]}
-            sliderLength={280}
+            sliderLength={screenWidth * sliderScreenRatio}
             min={0}
             max={maxValue}
             step={1000}
@@ -190,7 +193,7 @@ export const SearchPage = () => {
 const styles = StyleSheet.create({
   filterZone: {alignItems: 'center'},
   rowFilterWrapper: {
-    width: screenWidth > 420 ? 350 : '90%',
+    width: screenWidth > 420 ? 400 : '95%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -198,10 +201,16 @@ const styles = StyleSheet.create({
   animalTypeButton: {
     width: 36,
     height: 36,
-    margin: 10,
     borderRadius: 36,
     borderColor: 'black',
     borderWidth: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  animalTypeTouchable: {
+    width: 40,
+    height: 40,
+    margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -209,7 +218,7 @@ const styles = StyleSheet.create({
     height: 40,
     flex: 1,
     padding: 10,
-    margin: 10,
+    margin: 5,
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 1,
@@ -221,6 +230,6 @@ const styles = StyleSheet.create({
     marginBottom: -12,
     justifyContent: 'space-between',
   },
-  slideMinMaxPrice: {width: 40, color: 'black'},
+  slideMinMaxPrice: {color: 'black'},
   sliderPriceText: {fontWeight: 'bold', color: 'black'},
 });
