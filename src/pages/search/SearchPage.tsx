@@ -128,6 +128,7 @@ export const SearchPage = () => {
               labelField="label"
               valueField="value"
               placeholder="Mois"
+              autoScroll
               placeholderStyle={{color: 'gray'}}
               onChange={item =>
                 setFilters(previousFilters => ({
