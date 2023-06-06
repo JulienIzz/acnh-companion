@@ -18,6 +18,7 @@ import {Dropdown} from 'react-native-element-dropdown';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import {monthData, hourData} from './filterData';
 import {filterAnimalList} from './functions/filterAnimalList';
+import {getActualMonthAndHour} from './functions/getActualMonthAndHour';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
 
@@ -138,6 +139,23 @@ export const SearchPage = () => {
                 }))
               }
             />
+            <TouchableOpacity
+              onPress={() => {
+                setFilters(previousFilters => ({
+                  ...previousFilters,
+                  month: getActualMonthAndHour().month,
+                  hour: getActualMonthAndHour().hour,
+                }));
+              }}
+              style={styles.animalTypeTouchable}>
+              <View
+                style={[styles.animalTypeButton, {backgroundColor: '#d4a373'}]}>
+                <Image
+                  style={{width: 20, height: 20}}
+                  source={require('./img/actualTime.png')}
+                />
+              </View>
+            </TouchableOpacity>
             <Dropdown
               style={styles.selectZone}
               data={hourData}
