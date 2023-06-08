@@ -7,7 +7,7 @@ jest.mock('@react-navigation/native');
 
 const MOCK_BUTTON_LABEL = 'Bouton numéro 1';
 const MOCK_BUTTON_PATH = require('../img/bugs.png');
-const MOCK_BUTTON_TARGET = 'Test';
+const MOCK_BUTTON_TARGET = 'BugReporting';
 
 const MOCK_NUMBER_OF_COLUMNS = 3;
 const MOCK_MAX_GRID_WIDTH = 500;

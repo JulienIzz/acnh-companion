@@ -2,7 +2,7 @@ export type RootStackParamList = {
   Home: undefined;
   Encyclopedie: undefined;
   Search: undefined;
-  Test: undefined;
+  BugReporting: undefined;
 };
 
 export type Routes = keyof RootStackParamList;

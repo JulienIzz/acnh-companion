@@ -1,10 +1,10 @@
 import {render, screen} from '@testing-library/react-native';
-import {TestPage} from './TestPage';
+import {BugReporting} from './BugReporting';
 
 test('icon grid with pressable buttons', async () => {
-  render(<TestPage />);
+  render(<BugReporting />);
 
-  const headerOutput = screen.getByText('Page de test');
+  const headerOutput = screen.getByText('Report de bug');
 
   expect(headerOutput).toBeTruthy();
 });

@@ -285,7 +285,7 @@ exports[`homescreen with a header and multiple buttons 1`] = `
           }
         }
       >
-        Test
+        Report de bug
       </Text>
     </View>
   </View>

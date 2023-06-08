@@ -1,7 +1,7 @@
 import {HomeScreenGrid} from './HomeScreenGrid';
 import React from 'react';
 import {render, screen} from '@testing-library/react-native';
-import {ButtonData} from './components/HomeButton';
+import {ButtonData} from './components/HomeButtonsData';
 
 jest.mock('@react-navigation/native');
 
@@ -9,12 +9,12 @@ const MOCK_BUTTONS_DATASET: ButtonData[] = [
   {
     label: 'Bouton numéro 1',
     imagePath: require('./img/bugs.png'),
-    navigationTarget: 'Test',
+    navigationTarget: 'BugReporting',
   },
   {
     label: 'Bouton numéro 2',
     imagePath: require('./img/bugs.png'),
-    navigationTarget: 'Test',
+    navigationTarget: 'BugReporting',
   },
 ];
 
