@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Header} from '../header/Header';
 import {MailBodyInput} from './MailBodyInput';
 import {MailSubjectInput} from './MailSubjectInput';
+import {SendReportButton} from './SendReportButton';
 
 export const BugReporting = () => {
   const [mailSubject, setMailSubject] = useState<string>('');
@@ -15,6 +16,7 @@ export const BugReporting = () => {
       />
       <MailSubjectInput setMailSubject={setMailSubject} />
       <MailBodyInput setMailBody={setMailBody} />
+      <SendReportButton mailSubject={mailSubject} mailBody={mailBody} />
     </>
   );
 };
