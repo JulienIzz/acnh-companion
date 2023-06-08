@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import {Header} from '../header/Header';
+import {MailBodyInput} from './MailBodyInput';
 import {MailSubjectInput} from './MailSubjectInput';
 
 export const BugReporting = () => {
   const [mailSubject, setMailSubject] = useState<string>('');
+  const [mailBody, setMailBody] = useState<string>('');
 
   return (
     <>
@@ -12,6 +14,7 @@ export const BugReporting = () => {
         headerImagePath={require('../header/img/header_background.jpg')}
       />
       <MailSubjectInput setMailSubject={setMailSubject} />
+      <MailBodyInput setMailBody={setMailBody} />
     </>
   );
 };
