@@ -3,6 +3,7 @@ import {Header} from '../header/Header';
 import {MailBodyInput} from './MailBodyInput';
 import {MailSubjectInput} from './MailSubjectInput';
 import {SendReportButton} from './SendReportButton';
+import {StyleSheet} from 'react-native';
 
 export const BugReporting = () => {
   const [mailSubject, setMailSubject] = useState<string>('');
@@ -20,3 +21,16 @@ export const BugReporting = () => {
     </>
   );
 };
+
+export const globalStyle = StyleSheet.create({
+  boxStyle: {
+    marginHorizontal: 20,
+    marginVertical: 5,
+    backgroundColor: '#FAEDCD',
+    borderColor: '#D4A373',
+    borderRadius: 10,
+    borderWidth: 3,
+    padding: 8,
+    color: 'black',
+  },
+});
