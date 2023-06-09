@@ -12,7 +12,7 @@ import {LoadingPage} from '../common/components/LoadingPage';
 import {useFetchBugs} from '../common/functions/fetchBugs';
 import {useFetchFishes} from '../common/functions/fetchFishes';
 import {AnimalScrollView} from '../encyclopedie/components/AnimalScrollView';
-import {useState} from 'react';
+import {useReducer, useState} from 'react';
 import {Animal} from '../encyclopedie/Types';
 import {Dropdown} from 'react-native-element-dropdown';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
@@ -26,6 +26,7 @@ const HEADER_SEARCH_TEXT = 'Recherche';
 const screenWidth = Dimensions.get('window').width;
 const sliderScreenRatio = 0.78;
 const maxPrice = {fish: 15000, bug: 12000};
+
 export interface FiltersTypes {
   name: string;
   month: number | null;
@@ -39,13 +40,18 @@ export const SearchPage = () => {
   const {data: bugList, isLoading: isBugLoading} = useFetchBugs();
 
   const [animalData, setAnimalData] = useState<Animal[] | undefined>(fishList);
-  const [filters, setFilters] = useState<FiltersTypes>({
-    name: '',
-    month: null,
-    hour: null,
-    minPrice: 0,
-    maxPrice: 15000,
-  });
+  const [filters, updateFilters] = useReducer(
+    (previousFilters: FiltersTypes, nextFilters: Partial<FiltersTypes>) => {
+      return {...previousFilters, ...nextFilters};
+    },
+    {
+      name: '',
+      month: null,
+      hour: null,
+      minPrice: 0,
+      maxPrice: 15000,
+    },
+  );
 
   if (!isFishLoading && !isBugLoading && animalData !== undefined) {
     const dynamicMaxValue =
@@ -64,11 +70,10 @@ export const SearchPage = () => {
             <TouchableOpacity
               onPress={() => {
                 setAnimalData(fishList);
-                setFilters(previousFilters => ({
-                  ...previousFilters,
+                updateFilters({
                   minPrice: 0,
                   maxPrice: maxPrice.fish,
-                }));
+                });
               }}
               style={styles.animalTypeTouchable}>
               <View
@@ -88,11 +93,10 @@ export const SearchPage = () => {
             <TouchableOpacity
               onPress={() => {
                 setAnimalData(bugList);
-                setFilters(previousFilters => ({
-                  ...previousFilters,
+                updateFilters({
                   minPrice: 0,
                   maxPrice: maxPrice.bug,
-                }));
+                });
               }}
               style={styles.animalTypeTouchable}>
               <View
@@ -114,15 +118,14 @@ export const SearchPage = () => {
               placeholder="Nom"
               placeholderTextColor={'gray'}
               onChangeText={text =>
-                setFilters(previousFilters => ({
-                  ...previousFilters,
+                updateFilters({
                   name: text,
-                }))
+                })
               }
               value={filters.name}
             />
             <TouchableOpacity
-              onPress={resetFilters(setFilters, dynamicMaxValue)}
+              onPress={resetFilters(updateFilters, dynamicMaxValue)}
               style={styles.animalTypeTouchable}>
               <View
                 style={[styles.animalTypeButton, {backgroundColor: '#E7401D'}]}>
@@ -146,19 +149,17 @@ export const SearchPage = () => {
               value={filters.month}
               placeholderStyle={{color: 'gray'}}
               onChange={item =>
-                setFilters(previousFilters => ({
-                  ...previousFilters,
+                updateFilters({
                   month: item.value,
-                }))
+                })
               }
             />
             <TouchableOpacity
               onPress={() => {
-                setFilters(previousFilters => ({
-                  ...previousFilters,
+                updateFilters({
                   month: getActualMonthAndHour().month,
                   hour: getActualMonthAndHour().hour,
-                }));
+                });
               }}
               style={styles.animalTypeTouchable}>
               <View
@@ -181,10 +182,9 @@ export const SearchPage = () => {
               value={filters.hour}
               placeholderStyle={{color: 'gray'}}
               onChange={item =>
-                setFilters(previousFilters => ({
-                  ...previousFilters,
+                updateFilters({
                   hour: item.value,
-                }))
+                })
               }
             />
           </View>
@@ -207,11 +207,10 @@ export const SearchPage = () => {
               </View>
             )}
             onValuesChangeFinish={value =>
-              setFilters(previousFilters => ({
-                ...previousFilters,
+              updateFilters({
                 minPrice: value[0],
                 maxPrice: value[1],
-              }))
+              })
             }
           />
         </View>

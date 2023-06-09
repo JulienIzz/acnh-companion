@@ -1,11 +1,11 @@
-import {FiltersTypes} from '../SearchPage';
+import {UpdatingFiltersTypes} from '../SearchPage';
 
 export function resetFilters(
-  setFilters: React.Dispatch<React.SetStateAction<FiltersTypes>>,
+  updateFilters: React.Dispatch<UpdatingFiltersTypes>,
   sliderDynamicMaxValue: number,
 ) {
   return () => {
-    setFilters({
+    updateFilters({
       name: '',
       month: null,
       hour: null,
