@@ -1,5 +1,5 @@
 {
-  "name": "ACNH",
+  "name": "acnh-companion",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,7 +13,6 @@
     "@react-navigation/material-top-tabs": "^6.6.2",
     "@react-navigation/native": "^6.1.4",
     "@react-navigation/native-stack": "^6.9.10",
-    "nock": "^13.3.0",
     "react": "18.2.0",
     "react-native": "0.71.1",
     "react-native-element-dropdown": "<=2.5.3",
@@ -43,6 +42,7 @@
     "metro-react-native-babel-preset": "0.73.7",
     "prettier": "^2.4.1",
     "react-test-renderer": "18.2.0",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "nock": "^13.3.0"
   }
 }
