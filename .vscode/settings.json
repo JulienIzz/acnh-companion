@@ -4,5 +4,6 @@
     "*.ts": "${capture}.test.ts, ${capture}.test.ts.snap",
     "*.tsx": "${capture}.test.tsx, ${capture}.test.tsx.snap"
   },
-  "emmet.showExpandedAbbreviation": "never"
+  "emmet.showExpandedAbbreviation": "never",
+  "files.eol": "\n"
 }
