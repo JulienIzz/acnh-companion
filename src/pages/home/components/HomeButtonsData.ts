@@ -23,4 +23,9 @@ export const HOME_SCREEN_BUTTONS_DATASET: ButtonData[] = [
     imagePath: require('../img/bugs.png'),
     navigationTarget: 'BugReporting',
   },
+  {
+    label: 'Villageois',
+    imagePath: require('../img/villagers.png'),
+    navigationTarget: 'Villagers',
+  },
 ];
