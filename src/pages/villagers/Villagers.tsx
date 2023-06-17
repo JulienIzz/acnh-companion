@@ -1,8 +1,9 @@
-import {View} from 'react-native';
 import React from 'react';
 import {Header} from '../header/Header';
 import {useFetchVillagers} from '../common/functions/fetchVillagers';
 import {LoadingPage} from '../common/components/LoadingPage';
+import {VillagerView} from './VillagerView';
+import {FlashList} from '@shopify/flash-list';
 
 const HEADER_VILLAGERS_TEXT = 'Villageois';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
@@ -16,12 +17,19 @@ export const Villagers = () => {
       <LoadingPage image={HEADER_IMAGE_PATH} text={HEADER_VILLAGERS_TEXT} />
     );
   }
+
   return (
-    <View>
+    <>
       <Header
         headerImagePath={HEADER_IMAGE_PATH}
         headerText={HEADER_VILLAGERS_TEXT}
       />
-    </View>
+      <FlashList
+        horizontal={false}
+        data={villagerList}
+        estimatedItemSize={128}
+        renderItem={villager => <VillagerView villager={villager.item} />}
+      />
+    </>
   );
 };
