@@ -2,12 +2,20 @@ import {useState, useEffect} from 'react';
 import {Animated, TouchableHighlight, StyleSheet, View} from 'react-native';
 
 interface Props {
+  isExpanded: boolean;
+  setExpandedViewID: Function;
+  currentAnimalID: number;
   topView: JSX.Element;
   expandView: JSX.Element;
 }
 
-export const ExpandableView = ({topView, expandView}: Props) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+export const ExpandableView = ({
+  isExpanded,
+  setExpandedViewID,
+  currentAnimalID,
+  topView,
+  expandView,
+}: Props) => {
   const [marginTop] = useState(new Animated.Value(0));
 
   useEffect(() => {
@@ -22,7 +30,7 @@ export const ExpandableView = ({topView, expandView}: Props) => {
     <View style={styles.wrapper}>
       <TouchableHighlight
         onPress={() => {
-          setIsExpanded(!isExpanded);
+          setExpandedViewID(isExpanded ? null : currentAnimalID);
         }}
         style={styles.touchableContainer}>
         <View style={styles.animalCard}>{topView}</View>
