@@ -4,7 +4,6 @@ import {
   Dimensions,
   Image,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -21,6 +20,7 @@ import {monthData, hourData} from './filterData';
 import {filterAnimalList} from './functions/filterAnimalList';
 import {getActualMonthAndHour} from './functions/getActualMonthAndHour';
 import {resetFilters} from './functions/resetFilters';
+import {customLabelComponent} from './customLabelComponent';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 const HEADER_SEARCH_TEXT = 'Recherche';
 
@@ -189,17 +189,7 @@ export const SearchPage = () => {
             max={dynamicMaxValue}
             step={1000}
             enableLabel={true}
-            customLabel={value => (
-              <View style={styles.sliderLabels}>
-                <Text style={styles.slideMinMaxPrice}>
-                  {value.oneMarkerValue}
-                </Text>
-                <Text style={styles.sliderPriceText}>PRIX</Text>
-                <Text style={styles.slideMinMaxPrice}>
-                  {value.twoMarkerValue}
-                </Text>
-              </View>
-            )}
+            customLabel={customLabelComponent}
             onValuesChangeFinish={value =>
               updateFilters({
                 minPrice: value[0],
@@ -217,7 +207,7 @@ export const SearchPage = () => {
   }
 };
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   filterZone: {alignItems: 'center'},
   rowFilterWrapper: {
     width: screenWidth > 420 ? 400 : '95%',
