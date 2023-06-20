@@ -15,6 +15,7 @@ export const AnimalScrollView = ({data}: {data: AnimalProps}) => {
       horizontal={false}
       data={data}
       extraData={expandedViewID}
+      estimatedItemSize={150}
       renderItem={animal => (
         <ExpandableView
           isExpanded={animal.extraData === animal.item.id ? true : false}
