@@ -1,4 +1,4 @@
-import {View, Image, ImageSourcePropType} from 'react-native';
+import React from 'react';
 import {Header} from '../header/Header';
 import type {Animal} from './Types';
 import {FishListScrollView} from './components/FishListScrollView';

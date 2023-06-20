@@ -1,3 +1,4 @@
+import React from 'react';
 import type {Animal} from '../Types';
 import {TabStackParamList} from '../Encyclopedie';
 import {RouteProp} from '@react-navigation/native';
