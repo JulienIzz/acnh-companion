@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image, ImageSourcePropType, StyleSheet} from 'react-native';
 import {Header} from '../header/Header';
 import type {Animal} from './Types';
 import {FishListScrollView} from './components/FishListScrollView';
@@ -27,10 +28,7 @@ export const Encyclopedie = () => {
 
   if (!isFishLoading && !isBugLoading) {
     return (
-      <View
-        style={{
-          flex: 1,
-        }}>
+      <>
         <Header
           headerImagePath={HEADER_IMAGE_PATH}
           headerText={HEADER_ENCYCLOPEDIA_TEXT}
@@ -51,7 +49,7 @@ export const Encyclopedie = () => {
             options={iconOptions(BUG_ICON_IMAGE_PATH)}
           />
         </Tab.Navigator>
-      </View>
+      </>
     );
   } else {
     return (
@@ -82,29 +80,24 @@ const iconOptions = (icon: ImageSourcePropType) => {
   return {
     tabBarIcon: ({focused}: {focused: Boolean}) => {
       if (focused) {
-        return (
-          <Image
-            source={icon}
-            style={{
-              flex: 1,
-              width: '100%',
-              resizeMode: 'contain',
-            }}
-          />
-        );
+        return <Image source={icon} style={styles.iconFullOpacity} />;
       } else {
-        return (
-          <Image
-            source={icon}
-            style={{
-              flex: 1,
-              width: '100%',
-              resizeMode: 'contain',
-              opacity: 0.2,
-            }}
-          />
-        );
+        return <Image source={icon} style={styles.iconLowOpacity} />;
       }
     },
   };
 };
+
+const styles = StyleSheet.create({
+  iconFullOpacity: {
+    flex: 1,
+    width: '100%',
+    resizeMode: 'contain',
+  },
+  iconLowOpacity: {
+    flex: 1,
+    width: '100%',
+    resizeMode: 'contain',
+    opacity: 0.2,
+  },
+});

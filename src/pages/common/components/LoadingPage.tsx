@@ -14,11 +14,7 @@ type Props = {
 
 export function LoadingPage({image, text}: Props) {
   return (
-    <View
-      style={{
-        flex: 1,
-      }}
-      testID="Loader">
+    <View style={styles.pageWrapper} testID="Loader">
       <Header headerImagePath={image} headerText={text} />
       <View style={styles.loaderPage}>
         <ActivityIndicator />
@@ -32,5 +28,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  pageWrapper: {
+    flex: 1,
   },
 });
