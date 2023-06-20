@@ -1,7 +1,7 @@
-import {UpdatingFiltersTypes} from '../SearchPage';
+import {FiltersTypes} from '../SearchPage';
 
 export function resetFilters(
-  updateFilters: React.Dispatch<UpdatingFiltersTypes>,
+  updateFilters: React.Dispatch<FiltersTypes>,
   sliderDynamicMaxValue: number,
 ) {
   return () => {
