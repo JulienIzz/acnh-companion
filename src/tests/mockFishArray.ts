@@ -1,4 +1,4 @@
-import { Animal } from "../pages/encyclopedie/Types";
+import {Animal} from '../pages/encyclopedie/Types';
 
 export const mockFishArray: Animal[] = [
   {
