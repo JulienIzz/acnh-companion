@@ -21,7 +21,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
         "paddingRight": 0,
       }
     }
-    contentHeight={200}
+    contentHeight={300}
     contentWidth={400}
     data={
       [
@@ -284,6 +284,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
       }
     }
     disableRecycling={false}
+    estimatedItemSize={150}
     extendedState={
       {
         "value": null,
@@ -313,18 +314,18 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
           "_layoutProvider": [Circular],
           "_layouts": [
             {
-              "height": 100,
+              "height": 150,
               "type": 0,
               "width": 400,
               "x": 0,
               "y": 0,
             },
             {
-              "height": 100,
+              "height": 150,
               "type": 0,
               "width": 400,
               "x": 0,
-              "y": 100,
+              "y": 150,
             },
           ],
           "_maxSpan": 1,
@@ -332,7 +333,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
             "height": 900,
             "width": 400,
           },
-          "_totalHeight": 200,
+          "_totalHeight": 300,
           "_totalWidth": 400,
           "_window": {
             "height": 900,
@@ -350,16 +351,10 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
           "width": 0,
         },
         "averageWindow": AverageWindow {
-          "currentAverage": 100,
+          "currentAverage": 150,
           "currentCount": 1,
           "inputValues": [
-            100,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
+            150,
             ,
             ,
             ,
@@ -504,6 +499,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
               "shadow": "Medium",
             },
           ],
+          "estimatedItemSize": 150,
           "extraData": null,
           "horizontal": false,
           "numColumns": 1,
@@ -606,7 +602,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
           scrollOffset={0}
           style={
             {
-              "height": 200,
+              "height": 300,
               "width": 400,
             }
           }
@@ -823,7 +819,7 @@ exports[`fish scroll view card with 2 mock fish information 1`] = `
                 "flexDirection": "column",
                 "left": 0,
                 "position": "absolute",
-                "top": 100,
+                "top": 150,
                 "width": 400,
               }
             }

@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`homescreen with a header and multiple buttons 1`] = `
-<View
-  style={
-    {
-      "flex": 1,
-    }
-  }
->
+[
   <View
     style={
       {
@@ -62,7 +56,7 @@ exports[`homescreen with a header and multiple buttons 1`] = `
         Companion
       </Text>
     </View>
-  </View>
+  </View>,
   <View
     style={
       {
@@ -359,6 +353,6 @@ exports[`homescreen with a header and multiple buttons 1`] = `
         Villageois
       </Text>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
