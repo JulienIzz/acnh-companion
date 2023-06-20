@@ -27,6 +27,8 @@ const HEADER_SEARCH_TEXT = 'Recherche';
 const screenWidth = Dimensions.get('window').width;
 const sliderScreenRatio = 0.78;
 const maxPrice = {fish: 15000, bug: 12000};
+const redColor = '#E7401D';
+const tanColor = '#D4A373';
 
 export interface FiltersTypes {
   name: string;
@@ -61,7 +63,7 @@ export const SearchPage = () => {
     const filteredList = filterAnimalList(animalData, filters);
 
     return (
-      <View style={{flex: 1}}>
+      <>
         <Header
           headerText={HEADER_SEARCH_TEXT}
           headerImagePath={HEADER_IMAGE_PATH}
@@ -80,15 +82,11 @@ export const SearchPage = () => {
               <View
                 style={[
                   styles.animalTypeButton,
-                  {
-                    backgroundColor:
-                      animalData === fishList ? '#d4a373' : 'gray',
-                  },
+                  animalData === fishList
+                    ? styles.tanBackGround
+                    : styles.greyBackGround,
                 ]}>
-                <Image
-                  style={{width: 25, height: 25}}
-                  source={require('./img/fish.png')}
-                />
+                <Image style={styles.icon} source={require('./img/fish.png')} />
               </View>
             </TouchableOpacity>
             <TouchableOpacity
@@ -103,15 +101,11 @@ export const SearchPage = () => {
               <View
                 style={[
                   styles.animalTypeButton,
-                  {
-                    backgroundColor:
-                      animalData === bugList ? '#d4a373' : 'gray',
-                  },
+                  animalData === fishList
+                    ? styles.tanBackGround
+                    : styles.greyBackGround,
                 ]}>
-                <Image
-                  style={{width: 25, height: 25}}
-                  source={require('./img/bug.png')}
-                />
+                <Image style={styles.icon} source={require('./img/bug.png')} />
               </View>
             </TouchableOpacity>
             <TextInput
@@ -128,10 +122,9 @@ export const SearchPage = () => {
             <TouchableOpacity
               onPress={resetFilters(updateFilters, dynamicMaxValue)}
               style={styles.animalTypeTouchable}>
-              <View
-                style={[styles.animalTypeButton, {backgroundColor: '#E7401D'}]}>
+              <View style={[styles.animalTypeButton, styles.redBackGround]}>
                 <Image
-                  style={{width: 15, height: 15}}
+                  style={styles.crossIcon}
                   source={require('./img/cross.png')}
                 />
               </View>
@@ -141,14 +134,14 @@ export const SearchPage = () => {
             <Dropdown
               style={styles.selectZone}
               data={monthData}
-              itemTextStyle={{color: 'black'}}
-              selectedTextStyle={{color: 'black'}}
+              itemTextStyle={styles.blackColor}
+              selectedTextStyle={styles.blackColor}
               labelField="label"
               valueField="value"
               placeholder="Mois"
               autoScroll
               value={filters.month}
-              placeholderStyle={{color: 'gray'}}
+              placeholderStyle={styles.greyColor}
               onChange={item =>
                 updateFilters({
                   month: item.value,
@@ -164,9 +157,9 @@ export const SearchPage = () => {
               }}
               style={styles.animalTypeTouchable}>
               <View
-                style={[styles.animalTypeButton, {backgroundColor: '#d4a373'}]}>
+                style={[styles.animalTypeButton, {backgroundColor: tanColor}]}>
                 <Image
-                  style={{width: 20, height: 20}}
+                  style={styles.calendarIcon}
                   source={require('./img/actualTime.png')}
                 />
               </View>
@@ -174,14 +167,14 @@ export const SearchPage = () => {
             <Dropdown
               style={styles.selectZone}
               data={hourData}
-              itemTextStyle={{color: 'black'}}
-              selectedTextStyle={{color: 'black'}}
+              itemTextStyle={styles.blackColor}
+              selectedTextStyle={styles.blackColor}
               labelField="label"
               valueField="value"
               placeholder="Heure"
               autoScroll
               value={filters.hour}
-              placeholderStyle={{color: 'gray'}}
+              placeholderStyle={styles.greyColor}
               onChange={item =>
                 updateFilters({
                   hour: item.value,
@@ -217,7 +210,7 @@ export const SearchPage = () => {
         </View>
 
         <AnimalScrollView data={filteredList} />
-      </View>
+      </>
     );
   } else {
     return <LoadingPage image={HEADER_IMAGE_PATH} text={HEADER_SEARCH_TEXT} />;
@@ -266,4 +259,12 @@ const styles = StyleSheet.create({
   },
   slideMinMaxPrice: {color: 'black'},
   sliderPriceText: {fontWeight: 'bold', color: 'black'},
+  icon: {width: 25, height: 25},
+  calendarIcon: {width: 20, height: 20},
+  crossIcon: {width: 15, height: 15},
+  redBackGround: {backgroundColor: redColor},
+  tanBackGround: {backgroundColor: tanColor},
+  greyBackGround: {backgroundColor: 'grey'},
+  blackColor: {color: 'black'},
+  greyColor: {color: 'grey'},
 });
