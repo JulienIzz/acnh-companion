@@ -1,0 +1,634 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Villager page with a flashlist of 2 villagers 1`] = `
+[
+  <View
+    style={
+      {
+        "height": 60,
+        "marginBottom": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../src/pages/header/img/header_background.jpg",
+          }
+        }
+        style={
+          [
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            {
+              "height": "100%",
+              "width": undefined,
+            },
+            undefined,
+          ]
+        }
+      />
+      <Text
+        style={
+          {
+            "color": "black",
+            "fontSize": 30,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Villageois
+      </Text>
+    </View>
+  </View>,
+  <View
+    style={
+      {
+        "flex": 1,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <RCTScrollView
+      applyWindowCorrection={[Function]}
+      canChangeSize={true}
+      contentContainerStyle={
+        {
+          "backgroundColor": undefined,
+          "minHeight": 1,
+          "minWidth": 1,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+        }
+      }
+      contentHeight={256}
+      contentWidth={400}
+      data={
+        [
+          {
+            "birthday": "8/23",
+            "birthday-string": "August 23th",
+            "catch-phrase": "kitty cat",
+            "gender": "Female",
+            "icon_uri": "https://acnhapi.com/v1/icons/villagers/46",
+            "id": 0,
+            "image_uri": "https://acnhapi.com/v1/images/villagers/46",
+            "name": {
+              "name-EUfr": "Lixy",
+              "name-USen": "Lixy",
+            },
+            "personality": "Être de colère",
+            "species": "Cat",
+          },
+          {
+            "birthday": "1/1",
+            "birthday-string": "January 1st",
+            "catch-phrase": "ooga bunga",
+            "gender": "Male",
+            "icon_uri": "https://acnhapi.com/v1/icons/villagers/1",
+            "id": 1,
+            "image_uri": "https://acnhapi.com/v1/images/villagers/1",
+            "name": {
+              "name-EUfr": "Villager1",
+              "name-USen": "Villager1",
+            },
+            "personality": "Personality1",
+            "species": "Dragon",
+          },
+        ]
+      }
+      dataProvider={
+        DataProvider {
+          "_data": [
+            {
+              "birthday": "8/23",
+              "birthday-string": "August 23th",
+              "catch-phrase": "kitty cat",
+              "gender": "Female",
+              "icon_uri": "https://acnhapi.com/v1/icons/villagers/46",
+              "id": 0,
+              "image_uri": "https://acnhapi.com/v1/images/villagers/46",
+              "name": {
+                "name-EUfr": "Lixy",
+                "name-USen": "Lixy",
+              },
+              "personality": "Être de colère",
+              "species": "Cat",
+            },
+            {
+              "birthday": "1/1",
+              "birthday-string": "January 1st",
+              "catch-phrase": "ooga bunga",
+              "gender": "Male",
+              "icon_uri": "https://acnhapi.com/v1/icons/villagers/1",
+              "id": 1,
+              "image_uri": "https://acnhapi.com/v1/images/villagers/1",
+              "name": {
+                "name-EUfr": "Villager1",
+                "name-USen": "Villager1",
+              },
+              "personality": "Personality1",
+              "species": "Dragon",
+            },
+          ],
+          "_firstIndexToProcess": 0,
+          "_hasStableIds": false,
+          "_requiresDataChangeHandling": false,
+          "_size": 2,
+          "getStableId": [Function],
+          "rowHasChanged": [Function],
+        }
+      }
+      disableRecycling={false}
+      estimatedItemSize={128}
+      extendedState={{}}
+      externalScrollView={[Function]}
+      finalRenderAheadOffset={250}
+      forceNonDeterministicRendering={true}
+      horizontal={false}
+      initialOffset={0}
+      initialRenderIndex={0}
+      isHorizontal={false}
+      layoutProvider={
+        GridLayoutProviderWithProps {
+          "_acceptableRelayoutDelta": 1,
+          "_getHeightOrWidth": [Function],
+          "_getLayoutTypeForIndex": [Function],
+          "_getSpan": [Function],
+          "_hasExpired": false,
+          "_isHorizontal": false,
+          "_lastLayoutManager": GridLayoutManager {
+            "_acceptableRelayoutDelta": 1,
+            "_getSpan": [Function],
+            "_isGridHorizontal": false,
+            "_isHorizontal": false,
+            "_layoutProvider": [Circular],
+            "_layouts": [
+              {
+                "height": 128,
+                "type": 0,
+                "width": 400,
+                "x": 0,
+                "y": 0,
+              },
+              {
+                "height": 128,
+                "type": 0,
+                "width": 400,
+                "x": 0,
+                "y": 128,
+              },
+            ],
+            "_maxSpan": 1,
+            "_renderWindowSize": {
+              "height": 900,
+              "width": 400,
+            },
+            "_totalHeight": 256,
+            "_totalWidth": 400,
+            "_window": {
+              "height": 900,
+              "width": 400,
+            },
+          },
+          "_maxSpan": 1,
+          "_renderWindowSize": {
+            "height": 900,
+            "width": 400,
+          },
+          "_setLayoutForType": [Function],
+          "_tempDim": {
+            "height": 0,
+            "width": 0,
+          },
+          "averageWindow": AverageWindow {
+            "currentAverage": 128,
+            "currentCount": 1,
+            "inputValues": [
+              128,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+              ,
+            ],
+            "nextIndex": 1,
+          },
+          "defaultEstimatedItemSize": 100,
+          "layoutObject": {
+            "size": undefined,
+            "span": undefined,
+          },
+          "props": {
+            "data": [
+              {
+                "birthday": "8/23",
+                "birthday-string": "August 23th",
+                "catch-phrase": "kitty cat",
+                "gender": "Female",
+                "icon_uri": "https://acnhapi.com/v1/icons/villagers/46",
+                "id": 0,
+                "image_uri": "https://acnhapi.com/v1/images/villagers/46",
+                "name": {
+                  "name-EUfr": "Lixy",
+                  "name-USen": "Lixy",
+                },
+                "personality": "Être de colère",
+                "species": "Cat",
+              },
+              {
+                "birthday": "1/1",
+                "birthday-string": "January 1st",
+                "catch-phrase": "ooga bunga",
+                "gender": "Male",
+                "icon_uri": "https://acnhapi.com/v1/icons/villagers/1",
+                "id": 1,
+                "image_uri": "https://acnhapi.com/v1/images/villagers/1",
+                "name": {
+                  "name-EUfr": "Villager1",
+                  "name-USen": "Villager1",
+                },
+                "personality": "Personality1",
+                "species": "Dragon",
+              },
+            ],
+            "estimatedItemSize": 128,
+            "horizontal": false,
+            "numColumns": 1,
+            "renderItem": [Function],
+          },
+          "renderWindowInsets": {
+            "height": 0,
+            "width": 0,
+          },
+          "shouldRefreshWithAnchoring": true,
+        }
+      }
+      maxRenderAhead={750}
+      numColumns={1}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0}
+      onEndReachedThresholdRelative={0}
+      onItemLayout={[Function]}
+      onLayout={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onSizeChanged={[Function]}
+      onVisibleIndicesChanged={[Function]}
+      removeClippedSubviews={false}
+      renderAheadOffset={0}
+      renderAheadStep={250}
+      renderContentContainer={[Function]}
+      renderItem={[Function]}
+      renderItemContainer={[Function]}
+      rowRenderer={[Function]}
+      scrollEventThrottle={16}
+      scrollThrottle={16}
+      scrollViewProps={
+        {
+          "contentContainerStyle": {
+            "backgroundColor": undefined,
+            "minHeight": 1,
+            "minWidth": 1,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+          "onLayout": [Function],
+          "onScrollBeginDrag": [Function],
+          "refreshControl": undefined,
+          "style": {
+            "minHeight": 1,
+            "minWidth": 1,
+          },
+        }
+      }
+      style={
+        {
+          "minHeight": 1,
+          "minWidth": 1,
+        }
+      }
+      suppressBoundedSizeException={true}
+      windowCorrectionConfig={
+        {
+          "applyToInitialOffset": true,
+          "applyToItemScroll": true,
+          "value": {
+            "endCorrection": 0,
+            "startCorrection": 0,
+            "windowShift": -0,
+          },
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "flexDirection": "column",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "paddingLeft": 0,
+                "paddingTop": 0,
+              }
+            }
+          />
+          <View
+            style={
+              [
+                undefined,
+                undefined,
+              ]
+            }
+          />
+          <AutoLayoutView
+            enableInstrumentation={false}
+            horizontal={false}
+            onBlankAreaEvent={[Function]}
+            onLayout={[Function]}
+            renderAheadOffset={0}
+            scrollOffset={0}
+            style={
+              {
+                "height": 256,
+                "width": 400,
+              }
+            }
+            windowSize={900}
+          >
+            <CellContainer
+              index={0}
+              onLayout={[Function]}
+              style={
+                {
+                  "alignItems": "stretch",
+                  "flexDirection": "column",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": 400,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flexDirection": "column",
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#FAEDCD",
+                      "borderColor": "#D4A373",
+                      "borderRadius": 10,
+                      "borderWidth": 3,
+                      "flexDirection": "row",
+                      "marginHorizontal": 10,
+                      "marginVertical": 5,
+                      "padding": 8,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      {
+                        "flex": 1,
+                        "justifyContent": "space-evenly",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Nom : Lixy
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Personnalité : Être de colère
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Anniversaire : August 23th
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Sexe : Female
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Espèce : Cat
+                    </Text>
+                  </View>
+                  <Image
+                    source={
+                      {
+                        "uri": "https://acnhapi.com/v1/icons/villagers/46",
+                      }
+                    }
+                    style={
+                      {
+                        "height": 80,
+                        "margin": 5,
+                        "width": 80,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </CellContainer>
+            <CellContainer
+              index={1}
+              onLayout={[Function]}
+              style={
+                {
+                  "alignItems": "stretch",
+                  "flexDirection": "column",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 128,
+                  "width": 400,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flexDirection": "column",
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#FAEDCD",
+                      "borderColor": "#D4A373",
+                      "borderRadius": 10,
+                      "borderWidth": 3,
+                      "flexDirection": "row",
+                      "marginHorizontal": 10,
+                      "marginVertical": 5,
+                      "padding": 8,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      {
+                        "flex": 1,
+                        "justifyContent": "space-evenly",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Nom : Villager1
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Personnalité : Personality1
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Anniversaire : January 1st
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Sexe : Male
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "black",
+                          "fontSize": 14,
+                        }
+                      }
+                    >
+                      Espèce : Dragon
+                    </Text>
+                  </View>
+                  <Image
+                    source={
+                      {
+                        "uri": "https://acnhapi.com/v1/icons/villagers/1",
+                      }
+                    }
+                    style={
+                      {
+                        "height": 80,
+                        "margin": 5,
+                        "width": 80,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </CellContainer>
+          </AutoLayoutView>
+          <CellContainer
+            index={-1}
+            style={
+              [
+                undefined,
+                undefined,
+              ]
+            }
+          />
+          <View
+            style={
+              {
+                "paddingBottom": 0,
+                "paddingRight": 0,
+              }
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>,
+]
+`;
