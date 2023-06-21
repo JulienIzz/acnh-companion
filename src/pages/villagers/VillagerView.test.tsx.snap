@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Villager view card with mock information 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FAEDCD",
+      "borderColor": "#D4A373",
+      "borderRadius": 10,
+      "borderWidth": 3,
+      "flexDirection": "row",
+      "marginHorizontal": 10,
+      "marginVertical": 5,
+      "padding": 8,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "flex": 1,
+        "justifyContent": "space-evenly",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Nom : Villager1
+    </Text>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Personnalité : Personality1
+    </Text>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Anniversaire : January 1st
+    </Text>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Sexe : Male
+    </Text>
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontSize": 14,
+        }
+      }
+    >
+      Espèce : Dragon
+    </Text>
+  </View>
+  <Image
+    source={
+      {
+        "uri": "https://acnhapi.com/v1/icons/villagers/1",
+      }
+    }
+    style={
+      {
+        "height": 80,
+        "margin": 5,
+        "width": 80,
+      }
+    }
+  />
+</View>
+`;
