@@ -9,6 +9,11 @@ export interface ButtonData {
 
 export const HOME_SCREEN_BUTTONS_DATASET: ButtonData[] = [
   {
+    label: 'Villageois',
+    imagePath: require('../img/villagers.png'),
+    navigationTarget: 'Villagers',
+  },
+  {
     label: 'Encyclopédie',
     imagePath: require('../img/encyclo_betes.png'),
     navigationTarget: 'Encyclopedie',
@@ -19,13 +24,8 @@ export const HOME_SCREEN_BUTTONS_DATASET: ButtonData[] = [
     navigationTarget: 'Search',
   },
   {
-    label: 'Report de bug',
+    label: 'Aide',
     imagePath: require('../img/bugs.png'),
     navigationTarget: 'BugReporting',
-  },
-  {
-    label: 'Villageois',
-    imagePath: require('../img/villagers.png'),
-    navigationTarget: 'Villagers',
   },
 ];

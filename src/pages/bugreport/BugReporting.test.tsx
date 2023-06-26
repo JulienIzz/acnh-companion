@@ -5,7 +5,7 @@ import {BugReporting} from './BugReporting';
 test('icon grid with pressable buttons', async () => {
   render(<BugReporting />);
 
-  const headerOutput = screen.getByText('Report de bug');
+  const headerOutput = screen.getByText('Aide');
 
   expect(headerOutput).toBeTruthy();
 });

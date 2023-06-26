@@ -3,7 +3,8 @@ import {Header} from '../header/Header';
 import {MailBodyInput} from './MailBodyInput';
 import {MailSubjectInput} from './MailSubjectInput';
 import {SendReportButton} from './SendReportButton';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {RedirectToConfidentialityButton} from './RedirectToConfidentialityButton';
 
 export const BugReporting = () => {
   const [mailSubject, setMailSubject] = useState<string>('');
@@ -12,12 +13,15 @@ export const BugReporting = () => {
   return (
     <>
       <Header
-        headerText="Report de bug"
+        headerText="Aide"
         headerImagePath={require('../header/img/header_background.jpg')}
       />
       <MailSubjectInput setMailSubject={setMailSubject} />
       <MailBodyInput setMailBody={setMailBody} />
       <SendReportButton mailSubject={mailSubject} mailBody={mailBody} />
+      <View style={globalStyle.confidentialityButton}>
+        <RedirectToConfidentialityButton />
+      </View>
     </>
   );
 };
@@ -32,5 +36,9 @@ export const globalStyle = StyleSheet.create({
     borderWidth: 3,
     padding: 8,
     color: 'black',
+  },
+  confidentialityButton: {
+    flex: 1,
+    justifyContent: 'flex-end',
   },
 });

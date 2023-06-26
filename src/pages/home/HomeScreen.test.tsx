@@ -36,7 +36,7 @@ test('homescreen with a header and multiple buttons', async () => {
 
   const HeaderOutput = screen.getByText('Companion');
   const FirstButton = screen.getByText('Encyclopédie');
-  const SecondButton = screen.getByText('Report de bug');
+  const SecondButton = screen.getByText('Aide');
 
   expect(HeaderOutput).toBeTruthy();
   expect(FirstButton).toBeTruthy();
