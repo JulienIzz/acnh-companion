@@ -117,6 +117,77 @@ exports[`homescreen with a header and multiple buttons 1`] = `
         <Image
           source={
             {
+              "testUri": "../../../src/pages/home/img/villagers.png",
+            }
+          }
+          style={
+            {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          {
+            "color": "black",
+            "fontSize": 14,
+            "textAlign": "center",
+          }
+        }
+      >
+        Villageois
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "height": 160,
+          "width": 150,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "height": 100,
+            "opacity": 1,
+            "width": 100,
+          }
+        }
+      >
+        <Image
+          source={
+            {
               "testUri": "../../../src/pages/home/img/encyclo_betes.png",
             }
           }
@@ -279,78 +350,7 @@ exports[`homescreen with a header and multiple buttons 1`] = `
           }
         }
       >
-        Report de bug
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "alignItems": "center",
-          "height": 160,
-          "width": 150,
-        }
-      }
-    >
-      <View
-        accessibilityState={
-          {
-            "busy": undefined,
-            "checked": undefined,
-            "disabled": undefined,
-            "expanded": undefined,
-            "selected": undefined,
-          }
-        }
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "height": 100,
-            "opacity": 1,
-            "width": 100,
-          }
-        }
-      >
-        <Image
-          source={
-            {
-              "testUri": "../../../src/pages/home/img/villagers.png",
-            }
-          }
-          style={
-            {
-              "height": "100%",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
-      <Text
-        style={
-          {
-            "color": "black",
-            "fontSize": 14,
-            "textAlign": "center",
-          }
-        }
-      >
-        Villageois
+        Aide
       </Text>
     </View>
   </View>,
