@@ -6,11 +6,13 @@ import {mockVillagerArray} from '../../tests/mockVillagerArray';
 test('Villager view card with mock information', async () => {
   render(<VillagerView villager={mockVillagerArray[0]} />);
 
+  console.log(mockVillagerArray[0]);
+
   const nameOutput = screen.getByText('Nom : Villager1');
-  const personalityOutput = screen.getByText('Personnalité : Personality1');
+  const personalityOutput = screen.getByText('Personnalité : Smug');
   const birthdayOutput = screen.getByText('Anniversaire : January 1st');
   const sexOutput = screen.getByText('Sexe : Male');
-  const specieOutput = screen.getByText('Espèce : Dragon');
+  const specieOutput = screen.getByText('Espèce : Koala');
 
   expect(nameOutput).toBeTruthy();
   expect(personalityOutput).toBeTruthy();

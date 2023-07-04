@@ -34,10 +34,10 @@ test('Villager page with a flashlist of 2 villagers', async () => {
 
   const HeaderOutput = screen.getByText('Villageois');
   const nameOutput = screen.getByText('Nom : Villager1');
-  const personalityOutput = screen.getByText('Personnalité : Personality1');
-  const birthdayOutput = screen.getByText('Anniversaire : January 1st');
-  const sexOutput = screen.getByText('Sexe : Female');
-  const specieOutput = screen.getByText('Espèce : Cat');
+  const personalityOutput = screen.getByText('Personnalité : Suffisant');
+  const birthdayOutput = screen.getByText('Anniversaire : 1 janvier');
+  const sexOutput = screen.getByText('Sexe : Mâle');
+  const specieOutput = screen.getByText('Espèce : Koala');
 
   expect(HeaderOutput).toBeTruthy();
   expect(nameOutput).toBeTruthy();

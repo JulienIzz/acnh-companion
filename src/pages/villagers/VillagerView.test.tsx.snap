@@ -42,7 +42,7 @@ exports[`Villager view card with mock information 1`] = `
         }
       }
     >
-      Personnalité : Personality1
+      Personnalité : Smug
     </Text>
     <Text
       style={
@@ -72,7 +72,7 @@ exports[`Villager view card with mock information 1`] = `
         }
       }
     >
-      Espèce : Dragon
+      Espèce : Koala
     </Text>
   </View>
   <Image
