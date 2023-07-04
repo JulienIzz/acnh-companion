@@ -83,9 +83,9 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
         [
           {
             "birthday": "8/23",
-            "birthday-string": "August 23th",
+            "birthday-string": "23 aout",
             "catch-phrase": "kitty cat",
-            "gender": "Female",
+            "gender": "Femelle",
             "icon_uri": "https://acnhapi.com/v1/icons/villagers/46",
             "id": 0,
             "image_uri": "https://acnhapi.com/v1/images/villagers/46",
@@ -94,13 +94,13 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
               "name-USen": "Lixy",
             },
             "personality": "Être de colère",
-            "species": "Cat",
+            "species": "Chat",
           },
           {
             "birthday": "1/1",
-            "birthday-string": "January 1st",
+            "birthday-string": "1 janvier",
             "catch-phrase": "ooga bunga",
-            "gender": "Male",
+            "gender": "Mâle",
             "icon_uri": "https://acnhapi.com/v1/icons/villagers/1",
             "id": 1,
             "image_uri": "https://acnhapi.com/v1/images/villagers/1",
@@ -108,8 +108,8 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
               "name-EUfr": "Villager1",
               "name-USen": "Villager1",
             },
-            "personality": "Personality1",
-            "species": "Dragon",
+            "personality": "Suffisant",
+            "species": "Koala",
           },
         ]
       }
@@ -118,9 +118,9 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
           "_data": [
             {
               "birthday": "8/23",
-              "birthday-string": "August 23th",
+              "birthday-string": "23 aout",
               "catch-phrase": "kitty cat",
-              "gender": "Female",
+              "gender": "Femelle",
               "icon_uri": "https://acnhapi.com/v1/icons/villagers/46",
               "id": 0,
               "image_uri": "https://acnhapi.com/v1/images/villagers/46",
@@ -129,13 +129,13 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                 "name-USen": "Lixy",
               },
               "personality": "Être de colère",
-              "species": "Cat",
+              "species": "Chat",
             },
             {
               "birthday": "1/1",
-              "birthday-string": "January 1st",
+              "birthday-string": "1 janvier",
               "catch-phrase": "ooga bunga",
-              "gender": "Male",
+              "gender": "Mâle",
               "icon_uri": "https://acnhapi.com/v1/icons/villagers/1",
               "id": 1,
               "image_uri": "https://acnhapi.com/v1/images/villagers/1",
@@ -143,8 +143,8 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                 "name-EUfr": "Villager1",
                 "name-USen": "Villager1",
               },
-              "personality": "Personality1",
-              "species": "Dragon",
+              "personality": "Suffisant",
+              "species": "Koala",
             },
           ],
           "_firstIndexToProcess": 0,
@@ -247,9 +247,9 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
             "data": [
               {
                 "birthday": "8/23",
-                "birthday-string": "August 23th",
+                "birthday-string": "23 aout",
                 "catch-phrase": "kitty cat",
-                "gender": "Female",
+                "gender": "Femelle",
                 "icon_uri": "https://acnhapi.com/v1/icons/villagers/46",
                 "id": 0,
                 "image_uri": "https://acnhapi.com/v1/images/villagers/46",
@@ -258,13 +258,13 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                   "name-USen": "Lixy",
                 },
                 "personality": "Être de colère",
-                "species": "Cat",
+                "species": "Chat",
               },
               {
                 "birthday": "1/1",
-                "birthday-string": "January 1st",
+                "birthday-string": "1 janvier",
                 "catch-phrase": "ooga bunga",
-                "gender": "Male",
+                "gender": "Mâle",
                 "icon_uri": "https://acnhapi.com/v1/icons/villagers/1",
                 "id": 1,
                 "image_uri": "https://acnhapi.com/v1/images/villagers/1",
@@ -272,8 +272,8 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                   "name-EUfr": "Villager1",
                   "name-USen": "Villager1",
                 },
-                "personality": "Personality1",
-                "species": "Dragon",
+                "personality": "Suffisant",
+                "species": "Koala",
               },
             ],
             "estimatedItemSize": 128,
@@ -456,7 +456,7 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                         }
                       }
                     >
-                      Anniversaire : August 23th
+                      Anniversaire : 23 aout
                     </Text>
                     <Text
                       style={
@@ -466,7 +466,7 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                         }
                       }
                     >
-                      Sexe : Female
+                      Sexe : Femelle
                     </Text>
                     <Text
                       style={
@@ -476,7 +476,7 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                         }
                       }
                     >
-                      Espèce : Cat
+                      Espèce : Chat
                     </Text>
                   </View>
                   <Image
@@ -558,7 +558,7 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                         }
                       }
                     >
-                      Personnalité : Personality1
+                      Personnalité : Suffisant
                     </Text>
                     <Text
                       style={
@@ -568,7 +568,7 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                         }
                       }
                     >
-                      Anniversaire : January 1st
+                      Anniversaire : 1 janvier
                     </Text>
                     <Text
                       style={
@@ -578,7 +578,7 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                         }
                       }
                     >
-                      Sexe : Male
+                      Sexe : Mâle
                     </Text>
                     <Text
                       style={
@@ -588,7 +588,7 @@ exports[`Villager page with a flashlist of 2 villagers 1`] = `
                         }
                       }
                     >
-                      Espèce : Dragon
+                      Espèce : Koala
                     </Text>
                   </View>
                   <Image
