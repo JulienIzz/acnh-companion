@@ -1,11 +1,13 @@
 import {Villager} from '../../villagers/VillagerType';
 import {useQuery} from 'react-query';
+import {adaptVillagerData} from './adaptVillagerData';
 
 async function fetchVillagers(): Promise<Villager[]> {
   const response = await fetch('https://acnhapi.com/v1/villagers', {
     method: 'GET',
   });
   const data: Villager[] = Object.values(await response.json());
+  data.forEach(villager => adaptVillagerData(villager));
   data.unshift(Lixy);
   return data;
 }
