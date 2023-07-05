@@ -101,7 +101,7 @@ export const SearchPage = () => {
               <View
                 style={[
                   styles.animalTypeButton,
-                  animalData === fishList
+                  animalData === bugList
                     ? styles.tanBackGround
                     : styles.greyBackGround,
                 ]}>
