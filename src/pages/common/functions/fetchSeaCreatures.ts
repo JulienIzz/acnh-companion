@@ -9,7 +9,7 @@ async function fetchSeaCreatures(): Promise<SeaCreature[]> {
   return data;
 }
 
-export const useFetchFishes = () => {
+export const useFetchSeaCreatures = () => {
   const {data, isLoading} = useQuery('seaCreatureList', fetchSeaCreatures);
   return {data, isLoading};
 };
