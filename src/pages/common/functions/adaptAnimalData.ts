@@ -6,7 +6,7 @@ import {translateLocation} from './translateLocation';
 import {translateRarity} from './translateRarity';
 import {translateSize} from './translateSize';
 
-export const adaptAnimalData = (animal: Animal | Animal) => {
+export const adaptAnimalData = (animal: Animal) => {
   animal.availability['month-northern'] = formatDateIntervalIntoString(
     animal.availability['month-northern'],
   );
