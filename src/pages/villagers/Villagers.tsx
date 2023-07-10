@@ -8,6 +8,8 @@ import {FlashList} from '@shopify/flash-list';
 const HEADER_VILLAGERS_TEXT = 'Villageois';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 
+export type VillagersParams = undefined;
+
 export const Villagers = () => {
   const {data: villagerList, isLoading: isVillagerLoading} =
     useFetchVillagers();

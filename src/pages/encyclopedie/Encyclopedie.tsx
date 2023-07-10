@@ -17,6 +17,8 @@ const BUG_ICON_IMAGE_PATH = require('./img/bug.png');
 
 const Tab = createMaterialTopTabNavigator<TabStackParamList>();
 
+export type EncyclopedieParams = undefined;
+
 export type TabStackParamList = {
   Fish: {fishList: Animal[]};
   Bug: {bugList: Animal[]};

@@ -9,6 +9,8 @@ import {HomeScreenGrid} from './HomeScreenGrid';
 const HEADER_HOME_TEXT = 'Companion';
 const HEADER_IMAGE_PATH = require('../header/img/header_background.jpg');
 
+export type HomeParams = undefined;
+
 export const HomeScreen = () => {
   const {isLoading: isFishLoading} = useFetchFishes();
   const {isLoading: isBugLoading} = useFetchBugs();

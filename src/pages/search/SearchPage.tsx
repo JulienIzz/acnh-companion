@@ -30,6 +30,8 @@ const maxPrice = {fish: 15000, bug: 12000};
 const redColor = '#E7401D';
 const tanColor = '#D4A373';
 
+export type SearchParams = undefined;
+
 export interface FiltersTypes {
   name: string;
   month: number | null;

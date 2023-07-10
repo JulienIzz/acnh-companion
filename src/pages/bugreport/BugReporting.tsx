@@ -6,6 +6,8 @@ import {SendReportButton} from './SendReportButton';
 import {StyleSheet, View} from 'react-native';
 import {RedirectToConfidentialityButton} from './RedirectToConfidentialityButton';
 
+export type BugReportParams = undefined;
+
 export const BugReporting = () => {
   const [mailSubject, setMailSubject] = useState<string>('');
   const [mailBody, setMailBody] = useState<string>('');
