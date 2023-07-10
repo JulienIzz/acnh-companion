@@ -9,6 +9,7 @@ import type {RootStackParamList} from './Types';
 import {SearchPage} from '../pages/search/SearchPage';
 
 import {QueryClientProvider, QueryClient} from 'react-query';
+import {SeaCreatures} from '../pages/seacreatures/SeaCreatures';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -28,6 +29,7 @@ export const Navigator = () => {
           <Stack.Screen name="Search" component={SearchPage} />
           <Stack.Screen name="BugReporting" component={BugReporting} />
           <Stack.Screen name="Villagers" component={Villagers} />
+          <Stack.Screen name="SeaCreatures" component={SeaCreatures} />
         </Stack.Navigator>
       </QueryClientProvider>
     </NavigationContainer>
